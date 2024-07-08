@@ -2,6 +2,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 1080 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
     <g id="logo" transform="matrix(1,0,0,1,-0.0855304,1.70195)">
+        <g transform="matrix(1.00495,0,0,0.998421,0.0742529,-1.7058)">
+            <rect x="2.278" y="-2.437" width="1074.68" height="1081.71" style="fill:rgb(235,235,235);"/>
+        </g>
         <path id="Stern" d="M568.42,92.523L577.455,34.539L617.57,78.328L675.544,68.843L648.658,120.061L674.364,171.908L617.907,163.112L575.367,203.512L567.832,145.846L515.112,119.071L568.42,92.523Z"/>
         <g id="rechts">
             <g id="Kopf" transform="matrix(1,0,0,1,-18.0283,-2.14984)">

@@ -3,30 +3,30 @@
 metadata:
   # site_url should match your full production URL
   site_url: 'https://halide.netlify.app'
-  site_title: Sternenwanderer Tübingen
+  site_title: Sternenwanderer
   # site subtitles are optional
-  # site_subtitle_1: Theater Portfolio
-  # site_subtitle_2: Tübingen, BW
+  site_subtitle_1: Inszenierungen
+  site_subtitle_2: Tübingen, BW
   # Home page description, accepts markdown
   site_description: >
-    Halide is a customizable Jamstack portfolio website theme designed for photographers and still image creators. Read the docs at [github.com/danurbanowicz/halide](https://github.com/danurbanowicz/halide)
+    Die Sternenwander sind eine studentische Theatergruppe, die seit 2022 am Brechtbau aktiv ist.
   # footer contact email
   site_email: sternenwanderertuebingen@gmail.com
   # footer social link (the social title is defined in the i18n section)
-  site_social_url: 'https://github.com/danurbanowicz/halide'
+  site_social_url: 'https://www.instagram.com/sternenwanderer_tuethe/'
   # SVG image used for sharing/bookmark icons
   site_icon_svg: /assets/uploads/favicon.svg
   # optional PNG image used for sharing/bookmark icons
   site_icon_png: ''
   # add a GA4 ID to enable Google Analytics e.g. G-123456789
-  site_ga4_id: ''
+  # site_ga4_id: ''
   # home page SEO fields
   seo:
     # <title> tag
-    site_title: Halide - Jamstack portfolio theme
+    site_title: Sternenwanderer Tübingen
     # meta description
     site_description: >-
-      A customizable, minimalist portfolio website designed for photographers and still image creators.
+      Webseite der Sternenwanderer Tübingen—einer studentische Theatergrupp am Brechtbau.
     # Adds a noindex <meta> tag on all site pages, be careful y'all!
     # Instead you can block indexing per-project with no_index: true
     no_index: false
