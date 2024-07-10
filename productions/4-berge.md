@@ -3,8 +3,9 @@ draft: false
 
 title: Berge des Wahnsinns
 description: >
-  Adaptation der Lovecraft Kurzgeschichte _At the Mountains of Madness_ von unserem Regisseur Chris selbst geschrieben.
-year: 2024
+  Adaptation der Lovecraft Kurzgeschichte 'At the Mountains of Madness' von unserem Regisseur Chris selbst geschrieben.
+director: Christopher Schuch
+year: WiSe 2023/24
 images:
 
   - src: /assets/uploads/berge/poster.jpg

@@ -23,10 +23,10 @@ metadata:
   # home page SEO fields
   seo:
     # <title> tag
-    site_title: Sternenwanderer Tübingen
+    site_title: Sternenwanderer
     # meta description
     site_description: >-
-      Webseite der Sternenwanderer Tübingen—einer studentische Theatergrupp am Brechtbau.
+      Webseite der Sternenwanderer—einer studentische Theatergrupp am Brechtbau Tübingen.
     # Adds a noindex <meta> tag on all site pages, be careful y'all!
     # Instead you can block indexing per-project with no_index: true
     no_index: false
@@ -47,7 +47,7 @@ theme:
     link_dark: '#FFFFFF'
   theme_typography:
     # font can be any variable Google Font name. Enter 'system' to use a system font stack
-    font: Overpass Mono
+    font: Source Code Pro
     # can be any valid variable font weight value e.g. 415
     font_weight: 400
     # adjust font_scale up/down to increase/decrease font size
@@ -64,6 +64,8 @@ theme:
     # animations transition in milliseconds
     transition_duration: 300
     show_project_year: true
+    show_project_director: true
+    show_project_subgroup: true
     show_project_grid_titles: true
 # Image settings (lovell/sharp). JPEG format can't be disabled via the CMS.
 images:

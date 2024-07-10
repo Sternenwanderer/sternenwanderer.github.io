@@ -4,7 +4,8 @@ draft: false
 title: Maria Stuart
 description: >
   Inszenierung von Friedrich Schillers Trauerspiel.
-year: 2023
+director: Anna Sophia Buchmeier
+year: SoSe 2023
 images:
   - src: /assets/uploads/maria/poster.jpg
     caption: Poster

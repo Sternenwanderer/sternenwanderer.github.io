@@ -19,11 +19,11 @@ module.exports = function() {
         return data.eleventyExcludeFromCollections;
       },
     },
-    layout: "layouts/project.njk",
-    // Set a default position for all projects
+    layout: "layouts/production.njk",
+    // Set a default position for all productions
     position: 999,
     tags: [
-      "project"
+      "production"
     ],
 	}
 }
