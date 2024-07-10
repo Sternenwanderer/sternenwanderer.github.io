@@ -11,22 +11,21 @@ section: production
 
       <h1 class="grid__item--span-4 mw--readable">{{ title }}</h1>
       <div class="grid__item--span-4 mw--readable markdown"><em>{{ description | renderUsingMarkdown | safe }}</em></div>
-      {% if director and settings.theme.theme_features.show_production_director %}
+      {% if director %}
           <p class="grid__item--span-4 mw--readable mb--0">
             Regie: {{ director }}
         </p>
       {% endif %}
-      {% if subgroup and settings.theme.theme_features.show_production_subgroup %}
+      {% if subgroup  %}
           <p class="grid__item--span-4 mw--readable mb--0">
             Untergruppe: {{ subgroup }}
         </p>
       {% endif %}
-      {% if year and settings.theme.theme_features.show_production_year %}
+      {% if year %}
         <p class="grid__item--span-4 mw--readable mb--0">
           {{ year }}
         </p>
       {% endif %}
-
     </div>
 
   </header>

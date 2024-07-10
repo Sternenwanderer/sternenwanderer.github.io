@@ -40,7 +40,7 @@ module.exports = function(eleventyConfig) {
 
 	});
 
-  // Shortcode to generate a responsive project image
+  // Shortcode to generate a responsive production image
   eleventyConfig.addShortcode("generateImage", async function(params) {
 
     // Destructure the paramaters object and set some defaults
@@ -115,10 +115,10 @@ module.exports = function(eleventyConfig) {
   // Merge 11ty data instead of overriding values
   eleventyConfig.setDataDeepMerge(true);
 
-  // The projects collection, sorted by the numerical position value and then by date
-  eleventyConfig.addCollection("projects", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("projects/*.md")
-      //.filter(project => !Boolean(project.data.draft))
+  // The productions collection, sorted by the numerical position value and then by date
+  eleventyConfig.addCollection("productions", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("productions/*.md")
+      //.filter(production => !Boolean(production.data.draft))
       .sort((a, b) => b.data.position - a.data.position);
   });
 

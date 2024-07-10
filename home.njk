@@ -15,8 +15,8 @@ permalink: "/index.html"
 
   </header>
 
-  {% set projectList = collections.projects | limit(settings.theme.theme_features.item_output_limit or 48) %}
-  {% include "components/projectList.njk" %}
+  {% set productionList = collections.productions | limit(settings.theme.theme_features.item_output_limit or 48) %}
+  {% include "components/productionList.njk" %}
 
 </article>
 

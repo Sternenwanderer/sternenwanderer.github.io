@@ -15,7 +15,7 @@ date: 2024-07-08
 ---
 [write longer text about the play / staging]
 
-<div>Cast & Crew</div>
+<div><h1>Cast & Crew</h1></div>
 
 <div>
 <ul>
@@ -39,7 +39,7 @@ date: 2024-07-08
 </ul>
 </div>
 
-<div>Arbeit ohne Regie</div>
+<div><h1>Arbeit ohne Regie</h1></div>
 
 <div>
 </div>

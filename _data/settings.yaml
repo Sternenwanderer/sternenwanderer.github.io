@@ -63,10 +63,6 @@ theme:
     item_output_limit: 48
     # animations transition in milliseconds
     transition_duration: 300
-    show_project_year: true
-    show_project_director: true
-    show_project_subgroup: true
-    show_project_grid_titles: true
 # Image settings (lovell/sharp). JPEG format can't be disabled via the CMS.
 images:
   avif:

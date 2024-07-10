@@ -4,19 +4,15 @@
 
 		<a href="{{ '/' | url }}" class="grid__item link-nostyle">
       {# SEO: home page header title should be inside a h1 tag #}
-      {% if page.url == "/" %}
-				<h1>{{ settings.metadata.site_title }}</h1>
-      {% else %}
-        <span>{{ settings.metadata.site_title }}</span>
-      {% endif %}
+	  <h1>{{ settings.metadata.site_title }}</h1>
 		</a>
 
 		{% if settings.metadata.site_subtitle_1 %}
-			<span class="grid__item">{{ settings.metadata.site_subtitle_1 }}</span>
+			<span class="grid__item"><h1>{{ settings.metadata.site_subtitle_1 }}</h1></span>
 		{% endif %}
 
 		{% if settings.metadata.site_subtitle_2 %}
-			<span class="grid__item">{{ settings.metadata.site_subtitle_2 }}</span>
+			<span class="grid__item"><h1>{{ settings.metadata.site_subtitle_2 }}</h1></span>
 		{% endif %}
 
 		{% if settings.theme.theme_features.enable_dark_mode %}

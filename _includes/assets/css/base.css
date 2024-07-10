@@ -176,7 +176,11 @@ a[href].link-nostyle {
 	text-decoration: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1{
+	font-size: calc(var(--font-size-base) * var(--font-scale) / 75)
+}
+
+h2,h3,h4,h5,h6 {
 	font-size: calc(var(--font-size-base) * var(--font-scale) / 100);
 	font-weight: var(--font-weight);
 }
@@ -244,7 +248,7 @@ img {
        column-count: 2;
 	}
 
-	.grid--project {
+	.grid--production {
 		row-gap: calc(var(--space) * 1.5);
 	}
 
@@ -269,7 +273,7 @@ img {
 
 	.grid--header,
 	.grid--intro,
-	.grid--project,
+	.grid--production,
 	.grid--description,
 	.grid--footer {
 		grid-template-columns: repeat(4, 1fr);

@@ -1,21 +1,21 @@
-{% if projectList | length %}
+{% if productionList | length %}
 
-	<section class="columns columns--projects">
+	<section class="columns columns--productions">
 
-		{% for project in projectList | reverse %}
+		{% for production in productionList | reverse %}
 
 			<div class="columns__item mb--1">
 
-				<a href="{{ project.url | url }}">
+				<a href="{{ production.url | url }}">
 
 					<figure>
 
-						{# Images are output in the order they appear in project frontmatter #}
+						{# Images are output in the order they appear in production frontmatter #}
       			{# and can be ordered in Tina CMS using drag and drop #}
 
-						{# Set the first project image from the project #}
+						{# Set the first production image from the production #}
 						{% set image = "" %}
-						{% for i in project.data.images %}
+						{% for i in production.data.images %}
 							{% if loop.first %}
 								{% set image = i %}
 							{% endif %}
@@ -29,13 +29,13 @@
 							{% endif %}
 						{% endfor %}
 
-						{# Create an object for our project thumbnail image parameters which we can then
+						{# Create an object for our production thumbnail image parameters which we can then
         		destructure inside our shortcode function. See eleventy.js for what's going on #}
 						{% set params = 
 							{
 								"src": image.src,
 								"alt": image.caption or title,
-								"loadingType": "eager" if (loop.first and section != "project") else "lazy",
+								"loadingType": "eager" if (loop.first and section != "production") else "lazy",
 								"viewportSizes": "(min-width: 1140px) 22vw, (min-width: 540px) 45vw, 85vw",
 								"outputWidths": [
 									settings.config.image_grid_width_sm,
@@ -52,9 +52,9 @@
 						{# The image shortcode #}
 						{% generateImage params %}
 						
-						<figcaption class="pb--1{% if settings.theme.theme_features.show_project_grid_titles === false %} hide{% endif %}">
+						<figcaption class="pb--1{% if settings.theme.theme_features.show_production_grid_titles === false %} hide{% endif %}">
 
-							<span class="text--small arrow arrow--right">{{ project.data.title }}</span>
+							<span class="text--small arrow arrow--right">{{ production.data.title }}</span>
 
 						</figcaption>
 
