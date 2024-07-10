@@ -14,6 +14,7 @@ metadata:
   site_email: sternenwanderertuebingen@gmail.com
   # footer social link (the social title is defined in the i18n section)
   site_social_url: 'https://www.instagram.com/sternenwanderer_tuethe/'
+  site_about_url: '/about.html'
   # SVG image used for sharing/bookmark icons
   site_icon_svg: /assets/uploads/favicon.svg
   # optional PNG image used for sharing/bookmark icons
@@ -83,6 +84,7 @@ i18n:
   # single-language translations can be defined here
   site_social_title: Instagram
 # Internal config, hidden from Tina CMS
+  site_about_title: Über Uns
 config:
   # define responsive image widths for project thumbnails and large images
   # modifying these will require a corresponding change to viewport sizes in responsive image markup
