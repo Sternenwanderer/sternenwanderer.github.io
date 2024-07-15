@@ -15,6 +15,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("renderUsingMarkdown", function(rawString) {
     return mdRender.render(rawString);
   });
+  // local font files
+  eleventyConfig.addPassthroughCopy("assets/fonts");
+
 
   // https://www.11ty.dev/docs/plugins/image/
   // Generate PNG icon files and a link tag from a source SVG or PNG file
@@ -134,11 +137,6 @@ module.exports = function(eleventyConfig) {
       return 0.5 - Math.random();
     });
     return pageArr.slice(0, limit);
-  });
-
-  // Filter to format Google Fonts font name for use in link URLs
-  eleventyConfig.addFilter("formatGoogleFontName", name => {
-    return name.replace(/\s/g, '+');
   });
   
   // Date formatting (human readable)

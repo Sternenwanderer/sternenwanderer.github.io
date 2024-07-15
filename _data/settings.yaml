@@ -18,9 +18,7 @@ metadata:
   # SVG image used for sharing/bookmark icons
   site_icon_svg: /assets/uploads/favicon.svg
   # optional PNG image used for sharing/bookmark icons
-  site_icon_png: ''
-  # add a GA4 ID to enable Google Analytics e.g. G-123456789
-  # site_ga4_id: ''
+  site_icon_png: '/assets/uploads/favicon.png'
   # home page SEO fields
   seo:
     # <title> tag

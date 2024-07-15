@@ -1,6 +1,24 @@
 /* CSS variables (colors, typography etc) are set in CMS > Settings > Theme */
 
+@font-face {
+	font-family: 'Source Code Pro';
+	src: url("/assets/fonts/SourceCodeVF-Upright.otf.woff2")
+format("woff2-variations");
+  	font-weight: 125 950;
+  	font-stretch: 75% 125%;
+  	font-style: normal;
+  }
+@font-face {
+	font-family: "Source Code Pro";
+	src: url("/assets/fonts/SourceCodeVF-Italic.otf.woff2") 
+format("woff2-variations");
+	font-weight: 125 950;
+	font-stretch: 75% 125%;
+	font-style: italic;
+  }
+  
 :root {
+	--font: "Source Code Pro", monospace ;
 	--font-size-base: 0.95rem;
 	--font-size-small: calc(var(--font-size-base) / 1.25);
 	--space: calc(var(--space-scale) / 100 * 1rem);

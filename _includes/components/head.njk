@@ -1,6 +1,5 @@
 <head>
   <meta charset="utf-8">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <meta name="author" content="https://github.com/danurbanowicz">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,12 +37,6 @@
   {% endset %}
 
   <style>
-    {% set googleFontSymbolUrl = "https://fonts.googleapis.com/css2?family=Inter&display=swap&text=↑→↓←" %}
-    {% googleFontsCss googleFontSymbolUrl %}
-    {%- if (settings.theme.theme_typography.font != "system" and settings.theme.theme_typography.font != "") -%}
-      {% set googleFontUrl = "https://fonts.googleapis.com/css2?family=" + settings.theme.theme_typography.font | formatGoogleFontName or 'Inter' + "&display=swap" %}
-      {% googleFontsCss googleFontUrl %}
-    {%- endif -%}
     {{ css | cssmin | safe }}
   </style>
 </head>
