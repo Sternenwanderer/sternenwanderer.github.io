@@ -1,5 +1,5 @@
 # Sternenwanderer Website Repo
-Die Website ist mit [11ty](11ty.dev) gebaut und das Theme basiert auf [Halide](https://github.com/danurbanowicz/halide).
+Die Website ist mit [11ty](https://11ty.dev) gebaut und das Theme basiert auf [Halide](https://github.com/danurbanowicz/halide).
 
 ## Neue Inszenierung hinzufügen (auf GitHub)
 1. Neuen Ordner in `assets/uploads` erstellen, in dem Poster, Photos und alle anderen Dokumente leben.
