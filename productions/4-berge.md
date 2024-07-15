@@ -11,6 +11,6 @@ images:
   - src: /assets/uploads/berge/poster.jpg
     caption: Poster
 
-date: 2024-07-08
+date: 2024-01-15
 ---
 [ask chris to write something? / talk to adrian about programmheft]

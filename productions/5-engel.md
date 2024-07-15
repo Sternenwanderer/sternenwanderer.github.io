@@ -11,7 +11,7 @@ images:
   - src: /assets/uploads/engel/group-photo.jpg
     caption: Der Cast nach erfolgreicher Dernière
   - src: /assets/uploads/engel/uhoh.jpg
-date: 2024-07-08
+date: 2024-06-26
 ---
 [write longer text about the play / staging]
 

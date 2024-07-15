@@ -9,7 +9,7 @@ year: SoSe 2023
 images:
   - src: /assets/uploads/maria/poster.jpg
     caption: Poster
-date: 2024-07-08
+date: 2023-07-14
 
 ---
 

@@ -191,33 +191,12 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // Shortcode to download, cache, and minify Google Fonts CSS to reduce HTTP requests on the front-end
-  // TODO Consider downloading the font file itself and storing in the build cache
-  eleventyConfig.addShortcode("googleFontsCss", async function(url) {
-
-    let fontCss = await EleventyFetch(url, {
-      duration: "1d",
-      type: "text",
-      fetchOptions: {
-        headers: {
-          // Google Fonts API serves font formats based on the browser user-agent header
-          // So here we pretend to be a browser... in this case, Chrome 74 on MacOS 14
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"
-        }
-      }
-    });
-
-    //return fontCss;
-    return new CleanCSS({}).minify(fontCss).styles;
-  
-  });
-
   // Copy folders or static assets e.g. images to site output
   eleventyConfig.addPassthroughCopy({"assets/icons/favicon.svg" : "/favicon.svg"});
+  eleventyConfig.addPassthroughCopy({"assets/icons/favicon.png" : "/favicon.png"});
 
-  // Disable 11ty dev server live reload when using CMS locally
   eleventyConfig.setServerOptions({
-    liveReload: false
+    liveReload: true
   });
 
   return {
