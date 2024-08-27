@@ -29,7 +29,7 @@ date: Datum der Premiere
 ## Neue Inszenierung hinzufügen (local dev, bevorzugt)
 1. Repo clonen
 2. Schritten oben folgen
-3. `npx eleventy --serve`, um zu schauen, ob alles noch funktioniert
+3. `npm install`, Warnungen ignorieren, dann: `npx eleventy --serve`, um zu schauen, ob alles noch funktioniert
 4. Änderungen committen und pushen
 5. Warten, bis GitHub die Website neu deployed hat
 
