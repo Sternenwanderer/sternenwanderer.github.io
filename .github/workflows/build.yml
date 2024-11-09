@@ -2,7 +2,7 @@ name: build 11ty site
 
 on:
   push:
-    branches: ["deploy"]
+    branches: [ "main" ]
 
 permissions:
   contents: read
