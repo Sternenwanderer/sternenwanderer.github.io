@@ -2,7 +2,7 @@
 # Site metadata
 metadata:
   # site_url should match your full production URL
-  site_url: 'https://halide.netlify.app'
+  site_url: 'https://sternenwanderer.github.io'
   site_title: Sternenwanderer
   # site subtitles are optional
   site_subtitle_1: Inszenierungen
@@ -81,7 +81,6 @@ i18n:
   site_language: de
   # single-language translations can be defined here
   site_social_title: Instagram
-  
   site_about_title: Über Uns
 config:
   # define responsive image widths for project thumbnails and large images
