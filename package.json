@@ -1,7 +1,7 @@
 {
-  "name": "halide",
+  "name": "sternenwanderer.github.io",
   "version": "0.0.1",
-  "description": "Halide is a new, minimalist, responsive portfolio website designed for photographers and still image creators",
+  "description": "Website der Sternenwanderer",
   "scripts": {
     "build": "env NODE_ENV=production npx @11ty/eleventy --pathprefix 'websiterepo'",
     "watch": "npx @11ty/eleventy --watch",
@@ -13,15 +13,15 @@
     "url": "https://github.com/danurbanowicz/halide"
   },
   "author": {
-    "name": "Dan Urbanowicz",
-    "email": "dan.urbanowicz@gmail.com",
-    "url": "https://github.com/danurbanowicz"
+    "name": "Nicolai Plenk",
+    "email": "nicolai@mujistan.email",
+    "url": "https://github.com/noc-tae"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danurbanowicz/halide/issues"
+    "url": "https://github.com/Sternenwanderer/sternenwanderer.github.io/issues"
   },
-  "homepage": "https://github.com/danurbanowicz/halide",
+  "homepage": "https://github.com/Sternenwanderer/sternenwanderer.github.io",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.1",
