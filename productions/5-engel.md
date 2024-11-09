@@ -13,7 +13,6 @@ images:
   - src: /assets/uploads/engel/uhoh.jpg
 date: 2024-06-26
 ---
-[write longer text about the play / staging]
 
 <div><h1>Cast & Crew</h1></div>
 
@@ -37,9 +36,4 @@ date: 2024-06-26
   <li>Rian Knittel—Technik, Umbau</li>
   <li>Susanne König—Technik, die Stimme aus der Menge</li>
 </ul>
-</div>
-
-<div><h1>Arbeit ohne Regie</h1></div>
-
-<div>
 </div>

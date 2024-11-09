@@ -10,7 +10,7 @@ section: production
     <div class="grid grid--intro">
 
       <h1 class="grid__item--span-4 mw--readable">{{ title }}</h1>
-      <div class="grid__item--span-4 mw--readable markdown"><em>{{ description | renderUsingMarkdown | safe }}</em></div>
+      <div class="grid__item--span-4 mw--readable markdown"><em>{{ description | safe }}</em></div>
       {% if director %}
           <p class="grid__item--span-4 mw--readable mb--0">
             Regie: {{ director }}
@@ -35,7 +35,6 @@ section: production
     {% if images %}
 
       {# Images are output in the order they appear in production frontmatter #}
-      {# and can be ordered in Tina CMS using drag and drop #}
       {% for image in images %}
 
         {# Make an array of the enabled image formats from settings.yaml #}
@@ -79,7 +78,7 @@ section: production
   <section>
     <div class="grid grid--description pb--6">
       <div class="grid__item--span-4 mw--readable">
-        {{ layoutContent | renderUsingMarkdown | safe }}
+        {{ layoutContent | safe }}
       </div>
     </div>
   </section>

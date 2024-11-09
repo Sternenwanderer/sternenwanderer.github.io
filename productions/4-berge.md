@@ -14,3 +14,7 @@ images:
 date: 2024-01-15
 ---
 [ask chris to write something? / talk to adrian about programmheft]
+
+Ein Forscherteam der Miskatonic University aus Arkham bricht in die Antarktis auf, um Bodenproben zu entnehmen. Ziel ist laut Professor William Dyer, Geologe und Expeditionsleiter, die These zu beweisen, dass die Antarktis früher eine tropische Zone war.
+<br><br>
+Diese These bestätigt sich zwar, aber die Antarktis hat noch mehr zu bieten, …
