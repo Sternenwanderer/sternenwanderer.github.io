@@ -18,5 +18,3 @@ Der Held Siegfried ist für seine legendären Abenteuer bekannt, die ihm Ruhm un
 Basierend auf dem Text von Friedrich Hebbel inszenieren die Sternenwanderer Tübingen den deutschen Sagenstoff in einem Abend voller Treueschwüre und Verrat, Schwerter, Drachen und sagenumwobener Helden.
 
 Aufführungen 3. / 4. / 6. / 7. Dez. um 19 Uhr im BrechtbauTheater Tübingen, Wilhelmstraße 50
-
-[Reservierungen](https://forms.gle/eEsLiJsJh23kBnq1A)
