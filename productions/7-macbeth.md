@@ -5,9 +5,9 @@ description: >
   [ADD DESCRIPTION]
 director: [ADD REGIE]
 year: SoSe 2025
-images:
-  - src: /assets/uploads/macbeth/poster.jpg
-    caption: Poster
+#images:
+#  - src: /assets/uploads/macbeth/poster.jpg
+#    caption: Poster
 date: 2024-12-04
 ---
 [ADD POSTER TEXT]
