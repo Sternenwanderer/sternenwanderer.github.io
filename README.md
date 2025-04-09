@@ -38,3 +38,5 @@ Nicolai nerven
 
 ## Website aktualisieren
 Die Website sollte sich automatisch aktualisieren, sobald sich irgendetwas bei den Dateien geändert hat.
+
+## Reservierungen
