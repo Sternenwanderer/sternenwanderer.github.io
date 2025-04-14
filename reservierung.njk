@@ -1,0 +1,75 @@
+---
+title: Reservierung
+layout: layouts/base.njk
+permalink: /reservierung/index.html
+---
+
+<h1>Reservierung</h1>
+
+<br>
+<h1>MacBeth in dt. Fassung</h1>
+
+<h2>7€ pP</h2>
+<br>
+<p>
+  Hier können Sie Karten für die Vorstellungen von <strong>MacBeth</strong> reservieren.
+  Bitte beachten Sie, dass diese an der Abendkasse zur Bezahlung und Abholung hinterlegt werden.
+  Bei Verspätung oder Nichterscheinen behalten wir uns vor, die reservierten Karten wieder frei zu geben.
+</p>
+
+<form name="reservation" id="reservation" method="POST" action="https://script.google.com/macros/s/AKfycbwUNyGlaO0omtvJk3ax2nteaO98o7ILGATN_yYvHkAaC57vMByp4Wkh0t8bPQgnqnrP/exec">
+   <label for="name">Name:</label><br />
+  <input type="text" id="name" name="name" required /><br /><br />
+
+  <label for="email">E-Mail-Adresse:</label><br />
+  <input type="email" id="email" name="email" required /><br /><br />
+
+  <label for="anzahl">Personenanzahl:</label><br />
+  <input type="number" id="anzahl" name="anzahl" min="1" required /><br /><br />
+
+  <label for="datum">Vorstellungsdatum:</label><br />
+  <select id="datum" name="datum" required>
+    <option value="">Bitte wählen...</option>
+    <option value="09.06.">Mo, 09. Juni 2025</option>
+    <option value="10.06.">Di, 10. Juni 2025</option>
+    <option value="12.06.">Do, 12. Juni 2025</option>
+    <option value="13.06.">Fr, 13. Juni 2025</option>
+  </select><br /><br />
+
+  <button type="submit">Reservieren</button>
+</form>
+
+<div id="meldung" style="margin-top: 1em; color: green;"></div>
+
+<script>
+const form = document.getElementById('reservation');
+const meldung = document.getElementById('meldung');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const params = new URLSearchParams(formData);
+
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: params,
+        });
+
+        const text = await response.text();
+
+        if (text.trim() === 'OK') {
+            meldung.textContent = '✅ Reservierung erfolgreich! Wir freuen uns auf Ihren Besuch.';
+            form.reset();
+            form.style.display = "None";
+        } else {
+            meldung.style.color = 'red';
+            meldung.textContent = '❌ Es gab ein Problem: ' + text;
+        }
+    } catch (error) {
+        meldung.style.color = 'red';
+        meldung.textContent = '❌ Netzwerkfehler – bitte versuchen Sie es später erneut.';
+    }
+});
+</script>
