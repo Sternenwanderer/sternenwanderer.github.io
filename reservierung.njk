@@ -7,9 +7,9 @@ permalink: /reservierung/index.html
 <h1>Reservierung</h1>
 
 <br>
-<h1>MacBeth in dt. Fassung</h1>
+<h1>{{ reservierung.titel }} {{ reservierung.untertitel }}</h1>
 
-<h2>7€ pP</h2>
+<h2>{{ reservierung.preis }}</h2>
 <br>
 <p>
   Hier können Sie Karten für die Vorstellungen von <strong>MacBeth</strong> reservieren.
@@ -17,7 +17,7 @@ permalink: /reservierung/index.html
   Bei Verspätung oder Nichterscheinen behalten wir uns vor, die reservierten Karten wieder frei zu geben.
 </p>
 
-<form name="reservation" id="reservation" method="POST" action="https://script.google.com/macros/s/AKfycbz32b099_Gi39ggTrkCkg0qSy91RDVDsf4KWDcgALAbPmEEzaNjlmImjY14fTczc8HT/exec">
+<form name="reservation" id="reservation" method="POST" action="{{ reservierung.spreadsheet_deployment }}">
    <label for="name">Name:</label><br />
   <input type="text" id="name" name="name" required /><br /><br />
 
@@ -28,11 +28,30 @@ permalink: /reservierung/index.html
   <input type="number" id="anzahl" name="anzahl" min="1" required /><br /><br />
 
   <label for="datum">Vorstellungsdatum:</label><br />
-  <select id="datum" name="datum" required>
+  <select id="datum" name="datum" required data-spreadsheet-deployment="{{ reservierung.spreadsheet_deployment }}">
     <option value="">Bitte wählen...</option>
   </select><br /><br />
 
-  <button type="submit">Reservieren</button>
+  <label for="herkunft">Wie haben Sie von uns erfahren? (optional)</label><br />
+  <select id="herkunft" name="herkunft">
+    <option value="">Bitte wählen...</option>
+    <option value="Bekannte">Ich/Wir sind Freunde/Familie der Schauspielenden</option>
+    <option value="Flyer">Flyer</option>
+    <option value="Empfehlung">Empfehlung</option>
+    <option value="Poster">Poster</option>
+    <option value="Litfaßsäule">Litfaßsäule</option>
+    <option value="Social Media">Social Media</option>
+    <option value="Presse/Zeitung">Presse / Zeitung</option>
+    <option value="Anderes">Anderes</option>
+  </select><br /><br />
+
+<div id="herkunftAnderesFeld" style="display: none;">
+  <label for="herkunft_details">Bitte konkretisieren Sie:</label><br />
+  <input type="text" id="herkunft_details" name="herkunft_details" /><br /><br />
+</div>
+
+
+  <button type="submit" id="submitButton">Reservieren</button>
 </form>
 
 <div id="meldung" style="margin-top: 1em; color: green;"></div>
