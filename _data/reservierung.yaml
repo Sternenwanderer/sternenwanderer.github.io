@@ -2,4 +2,4 @@ verkauf: true # <-- Dieser Wert setzt fest, ob die Reservierungsseite angezeigt 
 titel: "MacBeth"
 untertitel: "in dt. Fassung"
 preis: "7€ p.P."
-spreadsheet_deployment: https://script.google.com/macros/s/AKfycbxVckMhafuD2uvL1uw5GQl5pP7oU6M6Pmcp4msswPbekvXbDsI8L4h5nq4_XxLggnai/exec
+spreadsheet_deployment: https://script.google.com/macros/s/AKfycbyDVTCrrw4tvzIxsI6Z_5tACBhbeMp1bTeih-aIIThKYS1FV9i9dhKgkvhY52-1yFk7/exec

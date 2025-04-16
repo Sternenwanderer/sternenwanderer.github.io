@@ -56,10 +56,11 @@ Hierzu müssen 2 Schritte durchgeführt werden:
 - 7. Wähle 
   - Type: Web App
   - Description: Egal
-  - Execute as Me(sternenwanderer@gmail.com)
+  - Execute as Me(sternenwanderertuebingen@gmail.com) <- An dieser Stelle angemeldet im offiziellen account
   - Who has Access: Anyone
 - 8. Klick auf Deploy
-- 9. Kopiere die Deployment URL
+- 9. Trust untrusted project bestätigen
+- 10. Kopiere die web App URL
 
 #### 2. Config File ändern
 - 1. Öffne `_data/reservierung.yaml`

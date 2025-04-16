@@ -19,6 +19,23 @@ function doPost(e) {
     const timestamp = new Date();
     sheet.appendRow([name, anzahl, email, timestamp, herkunftFinal]);
   
+    const subject = `Ihre Reservierung für MacBeth am ${datum}`;
+    const body = `
+  Hallo ${name},
+  
+  vielen Dank für Ihre Reservierung für MacBeth am ${datum}.
+  Wir haben ${anzahl} Karte(n) für Sie hinterlegt.
+  
+  Bitte beachten Sie: Die Karten liegen an der Abendkasse zur Abholung bereit.
+  Bei Verspätung oder Nichterscheinen behalten wir uns vor, die Reservierung freizugeben.
+  
+  Wir freuen uns auf Ihren Besuch!
+  
+  Ihre Sternenwanderer
+  `;
+  
+    MailApp.sendEmail(email, subject, body);
+  
     return ContentService.createTextOutput("OK");
   }
   
@@ -32,7 +49,7 @@ function doPost(e) {
       const name = sheet.getName();
       const count = sheet.getRange("H2").getValue();  // Anzahl Reservierungen
       const max = sheet.getRange("H1").getValue(); // Maximum
-      const remaining = 60 - count;
+      const remaining = max - count;
   
       result.push({
         date: name,
