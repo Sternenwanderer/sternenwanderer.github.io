@@ -13,7 +13,13 @@ permalink: "/index.html"
 
     </div>
 
+    {% if reservierung.verkauf %}
+      <a href="/reservierung/" class="button">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
+    {% endif %}
+
   </header>
+
+  
 
   {% set productionList = collections.productions | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/productionList.njk" %}
