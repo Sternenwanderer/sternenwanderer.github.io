@@ -1,4 +1,4 @@
-verkauf: true # <-- Dieser Wert setzt fest, ob die Reservierungsseite angezeigt wird: false = Kein Button zur Reservierungswebsite
+verkauf: false # <-- Dieser Wert setzt fest, ob die Reservierungsseite angezeigt wird: false = Kein Button zur Reservierungswebsite
 titel: "MacBeth"
 untertitel: "in dt. Fassung"
 preis: "7€ p.P."
