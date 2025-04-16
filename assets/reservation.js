@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const datumSelect = document.getElementById("datum");
     const anzahlInput = document.getElementById("anzahl");
     const infoBox = document.createElement("span");
-    datumSelect.parentNode.insertBefore(infoBox, datumSelect.nextSibling);
+    form.appendChild(infoBox);
 
     const spreadsheetDeployment = datumSelect.dataset.spreadsheetDeployment;
 
@@ -42,12 +42,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         infoBox.textContent = "";
 
         if ((remaining < 6 || anzahl > remaining) && selectedDate) {
-            infoBox.textContent = `⚠️ Nur noch ${remaining} Karten verfügbar`;
+            infoBox.textContent = `⚠️ Nur noch ${remaining} Karten verfügbar für den ${selectedDate}`;
+            infoBox.style.color = "red";
+            infoBox.style.marginLeft = "1em";
+        } else if (anzahl > 10) {
+            infoBox.textContent = `⚠️ Bitte maximal 10 Karten auf einmal reservieren`;
             infoBox.style.color = "red";
             infoBox.style.marginLeft = "1em";
         }
 
-        if (anzahl > remaining || anzahl <= 0 || !selectedDate) {
+        if (anzahl > remaining || anzahl <= 0 || !selectedDate || anzahl > 10) {
             reserveButton.disabled = true;
         } else {
             reserveButton.disabled = false;
