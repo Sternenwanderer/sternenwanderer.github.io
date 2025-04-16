@@ -195,6 +195,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"assets/icons/favicon.svg" : "/favicon.svg"});
   eleventyConfig.addPassthroughCopy({"assets/icons/favicon.png" : "/favicon.png"});
 
+  // Copy scripts: 
+  eleventyConfig.addPassthroughCopy("assets/js/reservation.js");
+
+
   eleventyConfig.setServerOptions({
     liveReload: true
   });

@@ -1,0 +1,59 @@
+---
+title: Reservierung
+layout: layouts/base.njk
+permalink: /reservierung/index.html
+---
+
+<h1>Reservierung</h1>
+
+<br>
+<h1>{{ reservierung.titel }} {{ reservierung.untertitel }}</h1>
+
+<h2>{{ reservierung.preis }}</h2>
+<br>
+<p>
+  Hier können Sie Karten für die Vorstellungen von <strong>MacBeth</strong> reservieren.
+  Bitte beachten Sie, dass diese an der Abendkasse zur Bezahlung und Abholung hinterlegt werden.
+  Bei Verspätung oder Nichterscheinen behalten wir uns vor, die reservierten Karten wieder frei zu geben.
+</p>
+
+<form name="reservation" id="reservation" method="POST" action="{{ reservierung.spreadsheet_deployment }}">
+   <label for="name">Name:</label><br />
+  <input type="text" id="name" name="name" required /><br /><br />
+
+  <label for="email">E-Mail-Adresse:</label><br />
+  <input type="email" id="email" name="email" required /><br /><br />
+
+  <label for="anzahl">Personenanzahl:</label><br />
+  <input type="number" id="anzahl" name="anzahl" min="1" required /><br /><br />
+
+  <label for="datum">Vorstellungsdatum:</label><br />
+  <select id="datum" name="datum" required data-spreadsheet-deployment="{{ reservierung.spreadsheet_deployment }}">
+    <option value="">Bitte wählen...</option>
+  </select><br /><br />
+
+  <label for="herkunft">Wie haben Sie von uns erfahren? (optional)</label><br />
+  <select id="herkunft" name="herkunft">
+    <option value="">Bitte wählen...</option>
+    <option value="Bekannte">Ich/Wir sind Freunde/Familie der Schauspielenden</option>
+    <option value="Flyer">Flyer</option>
+    <option value="Empfehlung">Empfehlung</option>
+    <option value="Poster">Poster</option>
+    <option value="Litfaßsäule">Litfaßsäule</option>
+    <option value="Social Media">Social Media</option>
+    <option value="Presse/Zeitung">Presse / Zeitung</option>
+    <option value="Anderes">Anderes</option>
+  </select><br /><br />
+
+  <div id="herkunftAnderesFeld" style="display: none;">
+    <label for="herkunft_details">Bitte konkretisieren Sie:</label><br />
+    <input type="text" id="herkunft_details" name="herkunft_details" /><br /><br />
+  </div>
+
+
+  <button type="submit" id="submitButton">Reservieren</button>
+</form>
+
+<div id="meldung" style="margin-top: 1em; color: green;"></div>
+
+<script src="/assets/js/reservation.js" defer></script>

@@ -34,7 +34,37 @@ date: Datum der Premiere
 5. Warten, bis GitHub die Website neu deployed hat
 
 ## Fragen?
-Nicolai nerven
+Nicolai nerven (Oder für Reservierungen Lukas)
 
 ## Website aktualisieren
 Die Website sollte sich automatisch aktualisieren, sobald sich irgendetwas bei den Dateien geändert hat.
+
+---
+
+## Reservierungen
+Reservierungen sind für folgende Aufführungen wiederholbar aufsetzbar.
+Hierzu müssen 2 Schritte durchgeführt werden: 
+- Ein neues Google Sheet mit Script aufsetzen
+- Das Konfigurationsfile "/_data/reservierung.yaml" mit Infos zur aktuellen Produktion befüllen.
+#### 1. Google sheet mit script:
+- 1. Setze eine neue Google Sheet auf
+- 2. Am unteren Rand erstelle Sheets für die Einzelnen Aufführungsdaten
+- 3. Kopiere die zwei Kopfzeilen aus vorherigen Stücken
+- 4. Im oberen Reiter Klicke auf `Extensions -> Apps Script`
+- 5. Ersetze sämtlichen code mit dem code in `googlesheet.js` in diesem Repository
+- 6. Klicke auf `Deploy -> New Deployment`
+- 7. Wähle 
+  - Type: Web App
+  - Description: Egal
+  - Execute as Me(sternenwanderertuebingen@gmail.com) <- An dieser Stelle angemeldet im offiziellen account
+  - Who has Access: Anyone
+- 8. Klick auf Deploy
+- 9. Trust untrusted project bestätigen
+- 10. Kopiere die web App URL
+
+#### 2. Config File ändern
+- 1. Öffne `_data/reservierung.yaml`
+- 2. Setze 
+  - verkauf: true
+  - titel, (untertitel), preis
+  - spreadsheet_deployment: die im vorherigen Schritt kopierte Deployment URL
