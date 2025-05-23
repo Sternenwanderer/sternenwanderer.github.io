@@ -79,6 +79,7 @@ form.addEventListener('submit', async (e) => {
 
     const formData = new FormData(form);
     const params = new URLSearchParams(formData);
+    reserveButton.disabled = true;
 
     try {
         const response = await fetch(form.action, {
