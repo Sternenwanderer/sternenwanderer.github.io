@@ -17,6 +17,11 @@ permalink: /reservierung/index.html
   Bei Verspätung oder Nichterscheinen behalten wir uns vor, die reservierten Karten wieder frei zu geben.
 </p>
 
+{% if reservierung.ausverkauft %}
+      <h2>Ausverkauft!</h2>
+      <p>Leider können wir Ihnen keine Karten mehr reservieren. Wir laden Sie aber recht herzlich ein, ihr Glück an der Abendkasse zu versuchen, da Aufgrund von Nichterscheinen häufig doch Plätze übrig bleiben. Wir weisen jedoch ausdrücklich darauf hin, dass wir Ihnen keinen Zutritt garantieren können.</p>
+{% endif %}
+
 <form name="reservation" id="reservation" method="POST" action="{{ reservierung.spreadsheet_deployment }}">
    <label for="name">Name:</label><br />
   <input type="text" id="name" name="name" required /><br /><br />
