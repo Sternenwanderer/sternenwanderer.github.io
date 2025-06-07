@@ -1,4 +1,5 @@
 verkauf: true # <-- false = Keine Reservierung / true = Reservierung aktiviert
+ausverkauft: true # wenn Keine tickets übrig
 titel: "MacBeth"
 untertitel: "in dt. Fassung"
 preis: "7€ p.P."
