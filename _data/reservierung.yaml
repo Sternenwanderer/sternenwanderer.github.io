@@ -1,4 +1,4 @@
-verkauf: false # <-- false = Keine Reservierung / true = Reservierung aktiviert
+verkauf: true # <-- false = Keine Reservierung / true = Reservierung aktiviert
 titel: "MacBeth"
 untertitel: "in dt. Fassung"
 preis: "7€ p.P."
