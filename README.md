@@ -66,5 +66,6 @@ Hierzu müssen 2 Schritte durchgeführt werden:
 - 1. Öffne `_data/reservierung.yaml`
 - 2. Setze 
   - verkauf: true
+  - ausverkauft: false (Das Ändern, wenn keine Tickets mehr verfügbar sind)
   - titel, (untertitel), preis
   - spreadsheet_deployment: die im vorherigen Schritt kopierte Deployment URL
