@@ -37,9 +37,9 @@ date: 2024-06-26
   <li>Susanne König—Technik, die Stimme aus der Menge</li>
 </ul>
 </div>
-
+<br>
 <div>
   <p>
-    Wir haben uns offiziell von den Sternenwanderern getrennt, wir ihr mehr über uns wissen wollt, besucht gerne <a href="bruchbuehne.de">unsere Webseite</a>
+    Wir haben uns offiziell von den Sternenwanderern getrennt, wir ihr mehr über uns wissen wollt, besucht gerne <a href="https//:bruchbuehne.de">unsere Webseite</a>
   </p>
 </div>
