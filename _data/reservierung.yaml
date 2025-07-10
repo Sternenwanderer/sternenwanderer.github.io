@@ -1,4 +1,4 @@
-verkauf: true # <-- false = Keine Reservierung / true = Reservierung aktiviert
+verkauf: flase # <-- false = Keine Reservierung / true = Reservierung aktiviert
 ausverkauft: true # wenn Keine tickets übrig
 titel: "MacBeth"
 untertitel: "in dt. Fassung"
