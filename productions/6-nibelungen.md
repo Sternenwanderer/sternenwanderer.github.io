@@ -1,17 +1,16 @@
 ---
 draft: false
-
 title: Nibelungen
 description: >
   Die Nibelungen nach Friedrich Hebbel.
 director: Jan Friebertz & Diana Nowicki
 year: WiSe 2024/25
-images:
-
-  - src: /assets/uploads/nibelungen/poster.jpg
-    caption: Poster
-
+poster:
+  src: /assets/uploads/nibelungen/poster.jpg
+  caption: Poster designt von Maruscha Winkler
 date: 2024-12-04
+images:
+  - src: /assets/uploads/nibelungen/group_photo.jpg
 ---
 Der Held Siegfried ist für seine legendären Abenteuer bekannt, die ihm Ruhm und den Schatz der Nibelungen einbrachten. Am Hof von Worms hält er um die Hand der Prinzessin Kriemhild an. Dort wird eine Abmachung mit König Gunther getroffen, um auch ihm eine Ehefrau zu beschaffen. Es folgt eine Reise bis ins ferne Island der Walküren. Doch Hagen von Tronje, des Königs rechte Hand, ist Siegfried nicht so freundlich gesinnt, wie es scheint...
 

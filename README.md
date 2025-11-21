@@ -2,28 +2,40 @@
 Die Website ist mit [11ty](https://11ty.dev) gebaut und das Theme basiert auf [Halide](https://github.com/danurbanowicz/halide).
 
 ## Neue Inszenierung hinzufügen (auf GitHub)
+
 1. Neuen Ordner in `assets/uploads` erstellen, in dem Poster, Photos und alle anderen Dokumente leben.
 2. Neues .md Dokument im Ordner `productions` erstellen:
-```
+
+```yaml
 ---
 draft: false
 title: Stückname
-description: > Beschreibung
+description: >
+  Beschreibung
 director: Regie, wenn Regie: sonst subgroup: Untergruppe
 year: Semester
+poster:
+  src: /assets/uploads/NAME_DES_ORDNERS/poster.jpg
+  caption: Poster (optional)
 images:
-  - src: /assets/uploads/NAME_DES_ORDNERS/poster.jpg
-    caption: Poster
+  - src: /assets/uploads/NAME_DES_ORDNERS/photo1.jpg
+    caption: Szene
+    credit: Credit (optional)
+  - src: /assets/uploads/NAME_DES_ORDNERS/photo2.jpg
+    caption: Szene 2
+    credit: Credit (optional)
+cast:
+  - Name: Rolle
+  - Name: Rolle
+crew:
+  - Name: Funktion
+  - Name: Funktion
 date: Datum der Premiere
 ---
-[Zusamenfassung, Cast, etc]
+[Zusammenfassung, zusätzlicher Text in Markdown]
 ```
 
-3.  Photos:
-
-     Photos müssen wie das Poster im Header deklariert werden.
-
-4. Text:
+3. Text:
     Unter den drei Strichen kann beliebiger Text in [Markdown](https://www.markdownguide.org/) geschrieben werden.
 
 ## Neue Inszenierung hinzufügen (local dev, bevorzugt)

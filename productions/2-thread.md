@@ -5,9 +5,9 @@ description: >
     Modern adaptation of the Theseus and Minotaur myth written by our director Diana.
 director: Diana Nowicki
 year: SoSe 2023
-images:
-  - src: /assets/uploads/thread/poster.jpg
-    caption: Poster
+poster:
+  src: /assets/uploads/thread/poster.jpg
+  caption: Poster
 date: 2023-05-12
 ---
 

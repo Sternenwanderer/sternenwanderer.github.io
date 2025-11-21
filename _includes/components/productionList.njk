@@ -10,16 +10,17 @@
 
 					<figure>
 
-						{# Images are output in the order they appear in production frontmatter #}
-      			{# and can be ordered in Tina CMS using drag and drop #}
-
-						{# Set the first production image from the production #}
+						{# Use poster if available, otherwise use first image #}
 						{% set image = "" %}
-						{% for i in production.data.images %}
-							{% if loop.first %}
-								{% set image = i %}
-							{% endif %}
-						{% endfor %}
+						{% if production.data.poster %}
+							{% set image = production.data.poster %}
+						{% elif production.data.images %}
+							{% for i in production.data.images %}
+								{% if loop.first %}
+									{% set image = i %}
+								{% endif %}
+							{% endfor %}
+						{% endif %}
 
 						{# Make an array of the enabled image formats from settings.yaml #}
 						{% set outputFormats = [] %}

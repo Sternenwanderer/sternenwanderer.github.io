@@ -30,55 +30,104 @@ section: production
 
   </header>
 
-  <section class="grid grid--production pb--3">
+  {% if poster %}
+  <section class="poster-section pb--4">
+    {# Make an array of the enabled image formats from settings.yaml #}
+    {% set outputFormats = [] %}
+    {% for format, i in settings.images %}
+      {% if i.enabled === true %}
+        {{ '' if outputFormats.push(format) }}
+      {% endif %}
+    {% endfor %}
 
-    {% if images %}
+    {# Create an object for the poster image parameters #}
+    {% set params =
+      {
+        "src": poster.src,
+        "alt": poster.caption or title,
+        "classes": "poster-image",
+        "loadingType": "eager",
+        "viewportSizes": "(min-width: 1140px) 70vw, (min-width: 540px) 90vw, 100vw",
+        "outputWidths": [
+          settings.config.image_width_sm,
+          settings.config.image_width_md,
+          settings.config.image_width_lg
+        ],
+        "outputFormats": outputFormats,
+        "outputQualityJpeg": settings.images.jpeg.quality,
+        "outputQualityWebp": settings.images.webp.quality,
+        "outputQualityAvif": settings.images.avif.quality
+      }
+    %}
 
-      {# Images are output in the order they appear in production frontmatter #}
-      {% for image in images %}
+    {% generateImage params %}
+  </section>
+  {% endif %}
 
-        {# Make an array of the enabled image formats from settings.yaml #}
-        {% set outputFormats = [] %}
-        {% for format, i in settings.images %}
-          {% if i.enabled === true %}
-            {{ '' if outputFormats.push(format) }}
-          {% endif %}
-        {% endfor %}
+  <section class="production-content pb--6">
+    {% if images and images.length > 0 %}
+    <div class="production-content__gallery">
+<div class="image-gallery">
+  {% for image in images %}
+    {# Make an array of the enabled image formats from settings.yaml #}
+    {% set outputFormats = [] %}
+    {% for format, i in settings.images %}
+      {% if i.enabled === true %}
+        {{ '' if outputFormats.push(format) }}
+      {% endif %}
+    {% endfor %}
 
-        {# Create an object for our main production image parameters which we can then
-        destructure inside our shortcode function. See eleventy.js for what's going on #}
-        {% set params = 
-          {
-            "src": image.src,
-            "alt": image.caption or title,
-            "classes": "grid__item grid__item--breakout",
-            "loadingType": "eager" if loop.first else "lazy",
-            "viewportSizes": "(min-width: 1140px) 70vw, (min-width: 540px) 90vw, 100vw",
-            "outputWidths": [ 
-              settings.config.image_width_sm,
-              settings.config.image_width_md,
-              settings.config.image_width_lg
-            ],
-            "outputFormats": outputFormats,
-            "outputQualityJpeg": settings.images.jpeg.quality,
-            "outputQualityWebp": settings.images.webp.quality,
-            "outputQualityAvif": settings.images.avif.quality
-          }
-        %}
+    {# Create an object for our gallery image parameters #}
+    {% set params =
+      {
+        "src": image.src,
+        "alt": image.caption or title,
+        "classes": "image-gallery__item",
+        "loadingType": "eager" if loop.first else "lazy",
+        "viewportSizes": "(min-width: 1140px) 35vw, (min-width: 840px) 45vw, 100vw",
+        "outputWidths": [
+          settings.config.image_width_sm,
+          settings.config.image_width_md,
+          settings.config.image_width_lg
+        ],
+        "outputFormats": outputFormats,
+        "outputQualityJpeg": settings.images.jpeg.quality,
+        "outputQualityWebp": settings.images.webp.quality,
+        "outputQualityAvif": settings.images.avif.quality
+      }
+    %}
 
-        {# The image shortcode #}
+    <figure class="image-gallery__figure" data-index="{{ loop.index0 }}" data-caption="{{ image.caption or '' }}" data-credit="{{ image.credit or '' }}">
+      <a href="#" class="image-gallery__link" data-image-index="{{ loop.index0 }}">
         {% generateImage params %}
+      </a>
+    </figure>
+  {% endfor %}
+</div>
 
-      {% endfor %}
-
+{# Lightbox modal #}
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox__backdrop"></div>
+  <div class="lightbox__content">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" aria-label="Previous image">&larr;</button>
+    <button class="lightbox__next" aria-label="Next image">&rarr;</button>
+    <div class="lightbox__image-container">
+      <img src="" alt="" class="lightbox__image">
+      <div class="lightbox__info">
+        <p class="lightbox__caption"></p>
+        <p class="lightbox__credit"></p>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
     {% endif %}
 
-  </section>
-
-  <section>
-    <div class="grid grid--description pb--6">
-      <div class="grid__item--span-4 mw--readable">
+    <div class="production-content__main{% if not images or images.length == 0 %} production-content__main--full{% endif %}">
+      <div class="mw--readable">
         {{ layoutContent | safe }}
+        {% include "components/castCrew.njk" %}
       </div>
     </div>
   </section>
@@ -88,6 +137,12 @@ section: production
 {# Output a list of random productions, excluding the current production, default limit of 48 #}
 {% set productionList = collections.productions | randomLimit((settings.theme.theme_features.item_output_limit or 48), page.url) %}
 {% include "components/productionList.njk" %}
+
+{# Lightbox JS for image gallery #}
+{% set lightboxJs %}
+  {% include "assets/js/lightbox.js" %}
+{% endset %}
+<script>{{ lightboxJs | jsmin | safe }}</script>
 
 {# Appended to <head> during build #}
 {% include "components/opengraph.njk" %}

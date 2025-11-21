@@ -1,0 +1,54 @@
+<div class="image-gallery">
+  {% for image in images %}
+    {# Make an array of the enabled image formats from settings.yaml #}
+    {% set outputFormats = [] %}
+    {% for format, i in settings.images %}
+      {% if i.enabled === true %}
+        {{ '' if outputFormats.push(format) }}
+      {% endif %}
+    {% endfor %}
+
+    {# Create an object for our gallery image parameters #}
+    {% set params =
+      {
+        "src": image.src,
+        "alt": image.caption or title,
+        "classes": "image-gallery__item",
+        "loadingType": "eager" if loop.first else "lazy",
+        "viewportSizes": "(min-width: 1140px) 35vw, (min-width: 840px) 45vw, 100vw",
+        "outputWidths": [
+          settings.config.image_width_sm,
+          settings.config.image_width_md,
+          settings.config.image_width_lg
+        ],
+        "outputFormats": outputFormats,
+        "outputQualityJpeg": settings.images.jpeg.quality,
+        "outputQualityWebp": settings.images.webp.quality,
+        "outputQualityAvif": settings.images.avif.quality
+      }
+    %}
+
+    <figure class="image-gallery__figure" data-index="{{ loop.index0 }}" data-caption="{{ image.caption or '' }}" data-credit="{{ image.credit or '' }}">
+      <a href="#" class="image-gallery__link" data-image-index="{{ loop.index0 }}">
+        {% generateImage params %}
+      </a>
+    </figure>
+  {% endfor %}
+</div>
+
+{# Lightbox modal #}
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox__backdrop"></div>
+  <div class="lightbox__content">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" aria-label="Previous image">&larr;</button>
+    <button class="lightbox__next" aria-label="Next image">&rarr;</button>
+    <div class="lightbox__image-container">
+      <img src="" alt="" class="lightbox__image">
+      <div class="lightbox__info">
+        <p class="lightbox__caption"></p>
+        <p class="lightbox__credit"></p>
+      </div>
+    </div>
+  </div>
+</div>

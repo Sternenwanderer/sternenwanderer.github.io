@@ -192,8 +192,8 @@ module.exports = function(eleventyConfig) {
   });
 
   // Copy folders or static assets e.g. images to site output
-  eleventyConfig.addPassthroughCopy({"assets/icons/favicon.svg" : "/favicon.svg"});
-  eleventyConfig.addPassthroughCopy({"assets/icons/favicon.png" : "/favicon.png"});
+  eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.svg" : "/favicon.svg"});
+  eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.png" : "/favicon.png"});
 
   // Copy scripts: 
   eleventyConfig.addPassthroughCopy("assets/js/reservation.js");

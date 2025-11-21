@@ -1,0 +1,41 @@
+{% if cast or crew %}
+<div class="cast-crew">
+  {% if cast %}
+  <section class="cast-crew__section">
+    <h2>Cast</h2>
+    <table class="cast-crew__table">
+      {% for member in cast %}
+      {# Support both old format (Name—Role) and new format (Name: Role) #}
+      {% set parts = member.split(':') %}
+      {% if parts.length == 1 %}
+        {% set parts = member.split('—') %}
+      {% endif %}
+      <tr>
+        <td class="cast-crew__name">{{ parts[0] | trim }}</td>
+        <td class="cast-crew__role">{{ parts[1] | trim }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </section>
+  {% endif %}
+
+  {% if crew %}
+  <section class="cast-crew__section">
+    <h2>Crew</h2>
+    <table class="cast-crew__table">
+      {% for member in crew %}
+      {# Support both old format (Name—Task) and new format (Name: Task) #}
+      {% set parts = member.split(':') %}
+      {% if parts.length == 1 %}
+        {% set parts = member.split('—') %}
+      {% endif %}
+      <tr>
+        <td class="cast-crew__name">{{ parts[0] | trim }}</td>
+        <td class="cast-crew__role">{{ parts[1] | trim }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </section>
+  {% endif %}
+</div>
+{% endif %}
