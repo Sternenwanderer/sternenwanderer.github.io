@@ -7,7 +7,7 @@ director: Diana Nowicki
 year: SoSe 2023
 poster:
   src: /assets/uploads/thread/poster.jpg
-  caption: Poster
+  caption: Poster designt von Maruscha Winkler
 date: 2023-05-12
 ---
 
