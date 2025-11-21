@@ -6,6 +6,9 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="{{ settings.theme.theme_colors.background }}">
 
+  {# Preload fonts to prevent layout shift #}
+  <link rel="preload" href="/assets/fonts/SourceCodeVF-Upright.otf.woff2" as="font" type="font/woff2" crossorigin>
+
   {# Set the SVG favicon for browsers that support it #}
   <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
 
