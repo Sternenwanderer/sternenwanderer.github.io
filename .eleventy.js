@@ -1,7 +1,7 @@
 const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-js");
-const htmlmin = require("html-minifier");
+const htmlmin = require("html-minifier-terser");
 const yaml = require("js-yaml");
 const slugify = require("slugify");
 const eleventyHelmetPlugin = require("eleventy-plugin-helmet");
@@ -115,8 +115,7 @@ module.exports = function(eleventyConfig) {
   // Add support for YAML data files with .yaml extension
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
-  // Merge 11ty data instead of overriding values
-  eleventyConfig.setDataDeepMerge(true);
+  // Note: setDataDeepMerge is removed in Eleventy 3.x as data deep merge is now the default behavior
 
   // The productions collection, sorted by the numerical position value and then by date
   eleventyConfig.addCollection("productions", function(collectionApi) {

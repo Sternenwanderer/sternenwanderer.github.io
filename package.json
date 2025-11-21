@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/Sternenwanderer/sternenwanderer.github.io",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-fetch": "^4.0.1",
-    "@11ty/eleventy-img": "^4.0.2",
+    "@11ty/eleventy-img": "^5.0.0",
     "clean-css": "^5.3.3",
     "dotenv": "^16.4.5",
     "eleventy-plugin-helmet": "^0.2.2",
-    "html-minifier": "^4.0.0",
+    "html-minifier-terser": "^7.2.0",
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0",
     "uglify-js": "^3.17.4"
