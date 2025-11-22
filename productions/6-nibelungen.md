@@ -11,6 +11,11 @@ poster:
 date: 2024-12-04
 images:
   - src: /assets/uploads/nibelungen/group_photo.jpg
+  - src: /assets/uploads/nibelungen/1.jpg
+  - src: /assets/uploads/nibelungen/2.jpg
+  - src: /assets/uploads/nibelungen/3.jpg
+  - src: /assets/uploads/nibelungen/4.jpg
+
 ---
 Der Held Siegfried ist für seine legendären Abenteuer bekannt, die ihm Ruhm und den Schatz der Nibelungen einbrachten. Am Hof von Worms hält er um die Hand der Prinzessin Kriemhild an. Dort wird eine Abmachung mit König Gunther getroffen, um auch ihm eine Ehefrau zu beschaffen. Es folgt eine Reise bis ins ferne Island der Walküren. Doch Hagen von Tronje, des Königs rechte Hand, ist Siegfried nicht so freundlich gesinnt, wie es scheint...
 
