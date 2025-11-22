@@ -9,6 +9,10 @@ poster:
   src: /assets/uploads/moertel/poster.jpg
   caption: Poster designt von Maruscha Winkler
 date: 2025-11-20
+images:
+  - src: /assets/uploads/moertel/IMG_7430.jpg
+  - src: /assets/uploads/moertel/IMG_8073.jpg
+  - src: /assets/uploads/moertel/IMG_8310.jpg
 ---
 
 Irgendwo in der Großstadt. Eine Gräberin gräbt ein Loch. Warum?
