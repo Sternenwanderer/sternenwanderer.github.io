@@ -126,7 +126,7 @@ section: production
 
     <div class="production-content__main{% if not images or images.length == 0 %} production-content__main--full{% endif %}">
       <div class="mw--readable">
-        {{ layoutContent | safe }}
+        {{ content | safe }}
         {% include "components/castCrew.njk" %}
       </div>
     </div>
