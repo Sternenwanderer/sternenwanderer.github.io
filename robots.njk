@@ -1,0 +1,9 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{%- set siteUrl = settings.metadata.site_url -%}
+User-agent: *
+Allow: /
+
+Sitemap: {{ siteUrl }}/sitemap.xml

@@ -1,0 +1,31 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- set siteUrl = settings.metadata.site_url -%}
+
+  {# Automatically include all pages from collections.all #}
+  {%- for page in collections.all -%}
+    {# Skip 404 page and any pages marked with no_index #}
+    {%- if page.url and page.url != '/404.html' and not page.data.no_index -%}
+  <url>
+    <loc>{{ siteUrl }}{{ page.url }}</loc>
+    {%- if page.date -%}
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    {%- endif -%}
+    {%- if page.url == '/' -%}
+    <priority>1.0</priority>
+    {%- elif page.url == '/reservierung/' or page.url == '/reservierung/index.html' -%}
+    <priority>0.9</priority>
+    {%- elif page.url == '/about.html' or page.url == '/about/' -%}
+    <priority>0.8</priority>
+    {%- else -%}
+    <priority>0.7</priority>
+    {%- endif -%}
+    <changefreq>monthly</changefreq>
+  </url>
+    {%- endif -%}
+  {%- endfor -%}
+</urlset>
