@@ -9,6 +9,12 @@ year: SoSe 2023
 poster:
   src: /assets/uploads/maria/poster.jpg
   caption: Poster
+images:
+  - src: /assets/uploads/maria/1.jpg
+  - src: /assets/uploads/maria/2.jpg
+  - src: /assets/uploads/maria/3.jpg
+  - src: /assets/uploads/maria/4.jpg
+  - src: /assets/uploads/maria/5.jpg
 date: 2023-07-14
 
 ---

@@ -13,6 +13,26 @@ images:
   - src: /assets/uploads/moertel/IMG_7430.jpg
   - src: /assets/uploads/moertel/IMG_8073.jpg
   - src: /assets/uploads/moertel/IMG_8310.jpg
+cast:
+  - Der Skeptiker: Nicolai Plenk
+  - Die Pessimistin: Naemi Collins
+  - Die Gräberin: Antonia Anstatt
+  - Polizist: Avery Lagler
+  - Maulwurf: Ju Lenz
+  - Philosoph: Teya Hart
+  - Pilger*innen: Avery Lagler, Charlie Hausch, Juliane Schnabel, Maruscha Winkler, Miriam Betz & Leonard LASTNAME
+  - Orden des O: Avery Lagler, Maruscha Winkler & Miriam Betz
+  - Avantgarderkünstlerpunks: Aschen LASTNAME, Ju Lenz & Teya Hart
+  - Moderatorin: Miriam Betz
+  - Kunstberaterinnen: Lotte LASTNAME & Maruscha Winkler
+  - Finanzanalystin: Maruscha Winkler
+  - Reisegruppe: Aschen LASTNAME, Avery Lagler, Ju Lenz, Lotte LASTNAME, Ruben Sailer & Teya Hart
+  - Unternehmensberaterin: Maruscha Winkler
+  - Geheimdienstpräsidentin: Lotte LASTNAME
+  - Treuer Mitarbeiter: Aschen LASTNAME
+  - Nation: Aschen LASTNAME, Avery Lagler, Ju Lenz & Ruben Sailer
+crew:
+  - Technik: Susanne König
 ---
 
 Irgendwo in der Großstadt. Eine Gräberin gräbt ein Loch. Warum?
