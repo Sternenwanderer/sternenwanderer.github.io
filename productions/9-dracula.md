@@ -1,12 +1,11 @@
 ---
-draft: false
+draft: true
 title: Dracula
 director: Ilea Rahn & Ruben Sailer
 description: >
-  Ein Stück voller wunderschöner Löcher
-year: SoSe 2026
+  Eine Adaption von Bram Stokers Dracula
 poster:
-
-  caption: Poster designt von Maruscha Winkler
+  src: /assets/uploads/dracula/poster.jpeg
+year: SoSe 2026
 date: 2026-05-25
 ---
