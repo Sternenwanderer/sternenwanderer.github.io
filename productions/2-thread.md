@@ -8,6 +8,11 @@ year: SoSe 2023
 poster:
   src: /assets/uploads/thread/poster.jpg
   caption: Poster designt von Maruscha Winkler
+images:
+  - src: /assets/uploads/thread/1.jpg
+  - src: /assets/uploads/thread/2.jpg
+  - src: /assets/uploads/thread/3.jpg
+  - src: /assets/uploads/thread/4.jpg
 date: 2023-05-12
 ---
 
