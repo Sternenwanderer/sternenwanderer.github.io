@@ -9,10 +9,10 @@ poster:
   src: /assets/uploads/thread/poster.jpg
   caption: Poster designt von Maruscha Winkler
 images:
-  - src: /assets/uploads/thread/1.jpg
-  - src: /assets/uploads/thread/2.jpg
-  - src: /assets/uploads/thread/3.jpg
-  - src: /assets/uploads/thread/4.jpg
+  - src: /assets/uploads/thread/1.JPG
+  - src: /assets/uploads/thread/2.JPG
+  - src: /assets/uploads/thread/3.JPG
+  - src: /assets/uploads/thread/4.JPG
 date: 2023-05-12
 ---
 

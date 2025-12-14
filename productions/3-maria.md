@@ -10,11 +10,11 @@ poster:
   src: /assets/uploads/maria/poster.jpg
   caption: Poster
 images:
-  - src: /assets/uploads/maria/1.jpg
-  - src: /assets/uploads/maria/2.jpg
-  - src: /assets/uploads/maria/3.jpg
-  - src: /assets/uploads/maria/4.jpg
-  - src: /assets/uploads/maria/5.jpg
+  - src: /assets/uploads/maria/1.JPG
+  - src: /assets/uploads/maria/2.JPG
+  - src: /assets/uploads/maria/3.JPG
+  - src: /assets/uploads/maria/4.JPG
+  - src: /assets/uploads/maria/5.JPG
 date: 2023-07-14
 
 ---
