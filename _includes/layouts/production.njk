@@ -26,6 +26,11 @@ section: production
           {{ year }}
         </p>
       {% endif %}
+      {% if programmheft %}
+        <p class="grid__item--span-4 mw--readable mb--0">
+          <a href="{{ programmheft }}" download class="button">Programmheft herunterladen (PDF)</a>
+        </p>
+      {% endif %}
     </div>
 
   </header>

@@ -9,10 +9,31 @@ poster:
   src: /assets/uploads/moertel/poster.jpg
   caption: Poster designt von Maruscha Winkler
 date: 2025-11-20
+programmheft: /assets/uploads/moertel/moertel-programmheft.pdf
 images:
   - src: /assets/uploads/moertel/IMG_7430.jpg
   - src: /assets/uploads/moertel/IMG_8073.jpg
   - src: /assets/uploads/moertel/IMG_8310.jpg
+cast:
+  - "Gräberin: Antonia Anstatt"
+  - "Skeptiker: Nicolai Plenk"
+  - "Pessimistin: Naemi Colin"
+  - "Polizist: Avery Lagler"
+  - "Maulwurf: Ju Lenz"
+  - "Philosoph: Teya Röhner"
+  - "Pilger*innen: Avery Lagler, Charlie Hausch, Juliane Schöllhorn, Maruscha Winkler, Miriam Betz & Leonard Stef"
+  - "Orden des O: Avery Lagler, Maruscha Winkler & Miriam Betz"
+  - "Avantgarderkünstlerpunks: Aschen Dehner, Ju Lenz & Teya Röhner"
+  - "Moderatorin: Miriam Betz"
+  - "Kunstberaterinnen: Charlotte Roth & Maruscha Winkler"
+  - "Finanzanalystin: Maruscha Winkler"
+  - "Reisegruppe: Aschen Dehner, Avery Lagler, Ju Lenz, Charlotte Roth, Ruben Sailer & Teya Röhner"
+  - "Unternehmensberaterin: Maruscha Winkler"
+  - "Geheimdienstpräsidentin: Charlotte Roth"
+  - "Treuer Mitarbeiter: Aschen Dehner"
+  - "Nation: Aschen Dehner, Avery Lagler, Ju Lenz & Ruben Sailer"
+crew:
+  - "Technik: Susanne König"
 ---
 
 Irgendwo in der Großstadt. Eine Gräberin gräbt ein Loch. Warum?

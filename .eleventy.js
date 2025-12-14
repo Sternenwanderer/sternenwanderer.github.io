@@ -194,7 +194,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.svg" : "/favicon.svg"});
   eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.png" : "/favicon.png"});
 
-  // Copy scripts: 
+  // Copy PDF files (programmhefte)
+  eleventyConfig.addPassthroughCopy("assets/uploads/**/*.pdf");
+
+  // Copy scripts:
   eleventyConfig.addPassthroughCopy("assets/js/reservation.js");
 
 

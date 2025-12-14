@@ -7,5 +7,5 @@ description: >
 poster:
   src: /assets/uploads/dracula/poster.jpeg
 year: SoSe 2026
-date: 2026-05-25
+date: 2025-05-25
 ---
