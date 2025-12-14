@@ -21,7 +21,7 @@ cast:
   - "Polizist: Avery Lagler"
   - "Maulwurf: Ju Lenz"
   - "Philosoph: Teya Röhner"
-  - "Pilger*innen: Avery Lagler, Charlie Hausch, Juliane Schöllhorn, Maruscha Winkler, Miriam Betz & Leonard Stef"
+  - "Pilger*innen: Avery Lagler, Charlie Hausch, Juliane Schöllhorn, Maruscha Winkler, Miriam Betz & Leonard Steffes"
   - "Orden des O: Avery Lagler, Maruscha Winkler & Miriam Betz"
   - "Avantgarderkünstlerpunks: Aschen Dehner, Ju Lenz & Teya Röhner"
   - "Moderatorin: Miriam Betz"
