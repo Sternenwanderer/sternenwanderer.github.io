@@ -14,6 +14,13 @@ images:
   - src: /assets/uploads/moertel/IMG_7430.jpg
   - src: /assets/uploads/moertel/IMG_8073.jpg
   - src: /assets/uploads/moertel/IMG_8310.jpg
+  - src: /assets/uploads/moertel/1.jpg
+  - src: /assets/uploads/moertel/2.jpg
+  - src: /assets/uploads/moertel/3.jpg
+  - src: /assets/uploads/moertel/4.jpg
+  - src: /assets/uploads/moertel/5.jpg
+  - src: /assets/uploads/moertel/6.jpg
+  - src: /assets/uploads/moertel/7.jpg
 cast:
   - "Gräberin: Antonia Anstatt"
   - "Skeptiker: Nicolai Plenk"
