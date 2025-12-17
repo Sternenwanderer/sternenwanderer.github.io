@@ -1,11 +1,8 @@
 const { DateTime } = require("luxon");
-const CleanCSS = require("clean-css");
-const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier-terser");
 const yaml = require("js-yaml");
 const slugify = require("slugify");
 const eleventyHelmetPlugin = require("eleventy-plugin-helmet");
-const EleventyFetch = require("@11ty/eleventy-fetch");
 const Image = require("@11ty/eleventy-img");
 const MarkdownIt = require("markdown-it");
 const mdRender = new MarkdownIt();
@@ -148,19 +145,46 @@ module.exports = function(eleventyConfig) {
     return encodeURIComponent(url);
   });
 
-  // Minify CSS
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
+  // Minify CSS using Lightning CSS (faster and more modern than clean-css)
+  eleventyConfig.addFilter("cssmin", async function(code) {
+    if (process.env.NODE_ENV === "production") {
+      try {
+        const lightningcss = await import("lightningcss");
+        const { code: minified } = lightningcss.transform({
+          code: Buffer.from(code),
+          minify: true,
+          targets: {
+            // Support browsers from last 2 years
+            safari: (16 << 16),
+            firefox: (115 << 16),
+            chrome: (115 << 16),
+          }
+        });
+        return minified.toString();
+      } catch (err) {
+        console.log("Lightning CSS error:", err.message);
+        return code;
+      }
+    }
+    return code;
   });
 
-  // Minify JS
-  eleventyConfig.addFilter("jsmin", function(code) {
-    let minified = UglifyJS.minify(code);
-    if (minified.error) {
-      console.log("UglifyJS error: ", minified.error);
-      return code;
+  // Minify JS using esbuild (faster and more modern than uglify-js)
+  eleventyConfig.addFilter("jsmin", async function(code) {
+    if (process.env.NODE_ENV === "production") {
+      try {
+        const esbuild = await import("esbuild");
+        const result = await esbuild.transform(code, {
+          minify: true,
+          target: "es2020"
+        });
+        return result.code;
+      } catch (err) {
+        console.log("esbuild error:", err.message);
+        return code;
+      }
     }
-    return minified.code;
+    return code;
   });
 
   // Minify HTML output
