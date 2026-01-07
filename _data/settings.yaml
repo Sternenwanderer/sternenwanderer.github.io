@@ -5,8 +5,7 @@ metadata:
   site_url: 'https://sternenwanderer.github.io'
   site_title: Sternenwanderer
   # site subtitles are optional
-  site_subtitle_1: Inszenierungen
-  site_subtitle_2: Tübingen, BW
+  site_subtitle_1: Tübingen, BW
   # Home page description, accepts markdown
   site_description: >
     Die Sternenwander sind eine studentische Theatergruppe, die seit 2022 am Brechtbau aktiv ist.
@@ -17,8 +16,6 @@ metadata:
   site_about_url: '/about.html'
   # SVG image used for sharing/bookmark icons
   site_icon_svg: /assets/uploads/favicon.svg
-  # optional PNG image used for sharing/bookmark icons
-  site_icon_png: '/assets/uploads/favicon.png'
   # home page SEO fields
   seo:
     # <title> tag
@@ -37,11 +34,11 @@ theme:
   # theme colors can be hex, rgb, rgba or any valid CSS color value
   theme_colors:
     # default colors aka "light mode"
-    background: '#ffffff'
+    background: '#f4eee0'
     text: '#101010'
     link: '#542BFF'
     # dark mode colors
-    background_dark: '#101010'
+    background_dark: '#1a1612'
     text_dark: '#E1E1E1'
     link_dark: '#FFFFFF'
   theme_typography:
@@ -65,8 +62,8 @@ theme:
 # Image settings (lovell/sharp). JPEG format can't be disabled via the CMS.
 images:
   avif:
-    enabled: false
-    quality: 75
+    enabled: true
+    quality: 70
   webp:
     enabled: true
     quality: 75
