@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Website der Sternenwanderer",
   "scripts": {
-    "build": "env NODE_ENV=production npx @11ty/eleventy --pathprefix 'websiterepo'",
+    "build": "env NODE_ENV=production npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --watch",
     "serve": "npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy"

@@ -8,6 +8,10 @@
 	--line-height-scale: {{ settings.theme.theme_typography.line_height_scale or "100" }};
 	--link-underline: {{ "underline" if settings.theme.theme_typography.link_underline else "none" }};
   --transition-time: {{ settings.theme.theme_features.transition_duration or "300" }}ms;
+
+  /* Button Colors - Transparent/Outlined aesthetic */
+  --color-button-bg: var(--color-background);
+  --color-button-text: var(--color-text);
 }
 
 :root[dark] {

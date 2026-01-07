@@ -9,25 +9,33 @@ section: production
 
     <div class="grid grid--intro">
 
+      <div class="grid__item--span-4 mb--2">
+        <a href="/" class="arrow arrow--left">Übersicht</a>
+      </div>
+
       <h1 class="grid__item--span-4 mw--readable">{{ title }}</h1>
-      <div class="grid__item--span-4 mw--readable markdown"><em>{{ description | safe }}</em></div>
-      {% if director %}
-          <p class="grid__item--span-4 mw--readable mb--0">
-            Regie: {{ director }}
-        </p>
-      {% endif %}
-      {% if subgroup  %}
-          <p class="grid__item--span-4 mw--readable mb--0">
-            Untergruppe: {{ subgroup }}
-        </p>
-      {% endif %}
-      {% if year %}
-        <p class="grid__item--span-4 mw--readable mb--0">
-          {{ year }}
-        </p>
-      {% endif %}
+      <div class="grid__item--span-4 mw--readable markdown mb--1"><em>{{ description | safe }}</em></div>
+      
+      <div class="grid__item--span-4 mw--readable production-meta">
+        {% if director %}
+            <p class="mb--0">
+              <strong>Regie:</strong> {{ director }}
+          </p>
+        {% endif %}
+        {% if subgroup  %}
+            <p class="mb--0">
+              <strong>Untergruppe:</strong> {{ subgroup }}
+          </p>
+        {% endif %}
+        {% if year %}
+          <p class="mb--0">
+            <strong>Jahr:</strong> {{ year }}
+          </p>
+        {% endif %}
+      </div>
+
       {% if programmheft %}
-        <p class="grid__item--span-4 mw--readable mb--0">
+        <p class="grid__item--span-4 mw--readable mt--1">
           <a href="{{ programmheft }}" download class="button">Programmheft herunterladen (PDF)</a>
         </p>
       {% endif %}
@@ -137,6 +145,10 @@ section: production
     </div>
   </section>
   
+  <div class="pb--4" style="border-top: 2px solid var(--color-text);">
+    <h2 class="p--1">Weitere Inszenierungen</h2>
+  </div>
+
 </article>
 
 {# Output a list of random productions, excluding the current production, default limit of 48 #}
