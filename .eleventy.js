@@ -216,7 +216,12 @@ module.exports = function(eleventyConfig) {
 
   // Copy folders or static assets e.g. images to site output
   eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.svg" : "/favicon.svg"});
-  eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.png" : "/favicon.png"});
+
+  // Copy source images for dynamic shadow effect
+  eleventyConfig.addPassthroughCopy("assets/uploads/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("assets/uploads/**/*.jpeg");
+  eleventyConfig.addPassthroughCopy("assets/uploads/**/*.png");
+  eleventyConfig.addPassthroughCopy("assets/uploads/**/*.webp");
 
   // Copy PDF files (programmhefte)
   eleventyConfig.addPassthroughCopy("assets/uploads/**/*.pdf");
