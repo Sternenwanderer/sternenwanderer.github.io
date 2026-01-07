@@ -51,7 +51,9 @@
 						%}
 
 						{# The image shortcode #}
-						{% generateImage params %}
+						<div class="dynamic-shadow-wrapper" style="--bg-image: url('{{ image.src }}')">
+							{% generateImage params %}
+						</div>
 						
 						<figcaption class="pb--1{% if settings.theme.theme_features.show_production_grid_titles === false %} hide{% endif %}">
 

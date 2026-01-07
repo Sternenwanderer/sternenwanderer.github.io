@@ -2,27 +2,25 @@
 
 	<div class="grid grid--header">
 
-		<a href="{{ '/' | url }}" class="grid__item link-nostyle">
-      {# SEO: home page header title should be inside a h1 tag #}
-	  <h1>{{ settings.metadata.site_title }}</h1>
-		</a>
+		<div class="header__title-group">
+			<a href="{{ '/' | url }}" class="link-nostyle">
+				<h1>{{ settings.metadata.site_title }}</h1>
+			</a>
 
-		{% if settings.metadata.site_subtitle_1 %}
-			<span class="grid__item"><h1>{{ settings.metadata.site_subtitle_1 }}</h1></span>
-		{% endif %}
-
-		{% if settings.metadata.site_subtitle_2 %}
-			<span class="grid__item"><h1>{{ settings.metadata.site_subtitle_2 }}</h1></span>
-		{% endif %}
+			{% if settings.metadata.site_subtitle_2 %}
+				<span class="header__divider hide-on-mobile">—</span>
+				<h1>{{ settings.metadata.site_subtitle_2 }}</h1>
+			{% endif %}
+		</div>
 
 		{% if settings.theme.theme_features.enable_dark_mode %}
 
 			<div class="grid__item grid__item--end grid__item--top">
 				<div class="dark-toggle">
 					<label for="toggle" class="toggle__label">
-						<span class="toggle__text">Toggle Dark Mode</span>
+						<span class="toggle__text visually-hidden">Dunkelmodus umschalten</span>
 						<input type="checkbox" name="toggle" id="toggle" class="toggle__checkbox">
-						<svg width="14" height="14" viewBox="0 0 16 16">
+						<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
 							<circle pid="0" cx="8" cy="8" r="7.5" fill="var(--color-text)" stroke="var(--color-text)"></circle>
 							<path pid="1" d="M1 8a7 7 0 007 7V1a7 7 0 00-7 7z" fill="var(--color-background)"></path>
 						</svg>

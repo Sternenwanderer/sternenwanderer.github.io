@@ -73,7 +73,9 @@ section: production
       }
     %}
 
-    {% generateImage params %}
+    <div class="dynamic-shadow-wrapper" style="--bg-image: url('{{ poster.src }}')">
+      {% generateImage params %}
+    </div>
   </section>
   {% endif %}
 
