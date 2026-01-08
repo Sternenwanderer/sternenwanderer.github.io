@@ -216,6 +216,7 @@ module.exports = function(eleventyConfig) {
 
   // Copy folders or static assets e.g. images to site output
   eleventyConfig.addPassthroughCopy({"assets/uploads/favicon.svg" : "/favicon.svg"});
+  eleventyConfig.addPassthroughCopy({"assets/uploads/icon_transparent.svg" : "/icon_transparent.svg"});
 
   // Copy source images for dynamic shadow effect
   eleventyConfig.addPassthroughCopy("assets/uploads/**/*.jpg");
@@ -228,6 +229,9 @@ module.exports = function(eleventyConfig) {
 
   // Copy scripts:
   eleventyConfig.addPassthroughCopy("assets/js/reservation.js");
+
+  // Copy _headers file
+  eleventyConfig.addPassthroughCopy("_headers");
 
 
   eleventyConfig.setServerOptions({
