@@ -34,7 +34,7 @@ theme:
   # theme colors can be hex, rgb, rgba or any valid CSS color value
   theme_colors:
     # default colors aka "light mode"
-    background: '#f4eee0'
+    background: '#f9f7f1'
     text: '#101010'
     link: '#542BFF'
     # dark mode colors

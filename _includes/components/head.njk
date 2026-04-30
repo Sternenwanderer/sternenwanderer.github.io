@@ -21,7 +21,7 @@
     <title>{{ settings.metadata.seo.site_title or settings.metadata.site_title }}</title>
     <meta name="description" content="{{ settings.metadata.seo.site_description or settings.metadata.site_description }}">
   {% else %}
-    <title>{{ seo.title or title }}</title>
+    <title>{{ seo.title or title }} | {{ settings.metadata.site_title }}</title>
     <meta name="description" content="{{ seo.description or description }}">
   {% endif %}
 

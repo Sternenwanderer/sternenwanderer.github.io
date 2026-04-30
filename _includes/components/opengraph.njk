@@ -2,12 +2,29 @@
   <meta property="og:title" content="{{ settings.metadata.seo.site_title or settings.metadata.site_title }}" data-helmet>
   <meta property="og:description" content="{{ settings.metadata.seo.site_description or settings.metadata.site_description }}" data-helmet>
 {% else %}
-  <meta property="og:title" content="{{ seo.title or title }}" data-helmet>
+  <meta property="og:title" content="{{ seo.title or title }} | {{ settings.metadata.site_title }}" data-helmet>
   <meta property="og:description" content="{{ seo.description or description }}" data-helmet>
 {% endif %}
 
 <meta property="og:type" content="website" data-helmet>
 <meta property="og:site_name" content="{{ settings.metadata.site_title }}" data-helmet>
+<meta property="og:locale" content="{{ settings.i18n.site_language or 'de' }}" data-helmet>
 
 {% set pageURL = settings.metadata.site_url + page.url %}
 <meta property="og:url" content="{{ pageURL }}" data-helmet>
+
+{% if poster and poster.src %}
+  <meta property="og:image" content="{{ settings.metadata.site_url }}{{ poster.src }}" data-helmet>
+{% endif %}
+
+<meta name="twitter:card" content="summary_large_image" data-helmet>
+{% if page.url == "/" %}
+  <meta name="twitter:title" content="{{ settings.metadata.seo.site_title or settings.metadata.site_title }}" data-helmet>
+  <meta name="twitter:description" content="{{ settings.metadata.seo.site_description or settings.metadata.site_description }}" data-helmet>
+{% else %}
+  <meta name="twitter:title" content="{{ seo.title or title }} | {{ settings.metadata.site_title }}" data-helmet>
+  <meta name="twitter:description" content="{{ seo.description or description }}" data-helmet>
+{% endif %}
+{% if poster and poster.src %}
+  <meta name="twitter:image" content="{{ settings.metadata.site_url }}{{ poster.src }}" data-helmet>
+{% endif %}

@@ -5,17 +5,13 @@ section: production
 ---
 <article>
 
-  <header class="pb--4">
+  <header class="pb--2">
 
     <div class="grid grid--intro">
 
-      <div class="grid__item--span-4 mb--2">
-        <a href="/" class="arrow arrow--left">Übersicht</a>
-      </div>
-
       <h1 class="grid__item--span-4 mw--readable">{{ title }}</h1>
       <div class="grid__item--span-4 mw--readable markdown mb--1"><em>{{ description | safe }}</em></div>
-      
+
       <div class="grid__item--span-4 mw--readable production-meta">
         {% if director %}
             <p class="mb--0">
@@ -33,18 +29,12 @@ section: production
           </p>
         {% endif %}
       </div>
-
-      {% if programmheft %}
-        <p class="grid__item--span-4 mw--readable mt--1">
-          <a href="{{ programmheft }}" download class="button">Programmheft herunterladen (PDF)</a>
-        </p>
-      {% endif %}
     </div>
 
   </header>
 
   {% if poster %}
-  <section class="poster-section pb--4">
+  <section class="poster-section">
     {# Make an array of the enabled image formats from settings.yaml #}
     {% set outputFormats = [] %}
     {% for format, i in settings.images %}
@@ -79,7 +69,7 @@ section: production
   </section>
   {% endif %}
 
-  <section class="production-content pb--6">
+  <section class="production-content pb--3">
     {% if images and images.length > 0 %}
     <div class="production-content__gallery">
 <div class="image-gallery">
@@ -120,6 +110,31 @@ section: production
   {% endfor %}
 </div>
 
+    </div>
+    {% endif %}
+
+    <div class="production-content__main{% if not images or images.length == 0 %} production-content__main--full{% endif %}">
+      <div class="mw--readable">
+        {{ content | safe }}
+
+        {% if programmheft %}
+          <div class="programmheft-download">
+            <a href="{{ programmheft }}" download class="button">Programmheft herunterladen (PDF)</a>
+          </div>
+        {% endif %}
+
+        {% include "components/castCrew.njk" %}
+      </div>
+    </div>
+  </section>
+  
+  <div class="pb--4" style="border-top: 2px solid var(--color-text);">
+    <h2 class="p--1">Weitere Inszenierungen</h2>
+  </div>
+
+</article>
+
+{% if images and images.length > 0 %}
 {# Lightbox modal #}
 <div id="lightbox" class="lightbox" aria-hidden="true">
   <div class="lightbox__backdrop"></div>
@@ -136,22 +151,7 @@ section: production
     </div>
   </div>
 </div>
-    </div>
-    {% endif %}
-
-    <div class="production-content__main{% if not images or images.length == 0 %} production-content__main--full{% endif %}">
-      <div class="mw--readable">
-        {{ content | safe }}
-        {% include "components/castCrew.njk" %}
-      </div>
-    </div>
-  </section>
-  
-  <div class="pb--4" style="border-top: 2px solid var(--color-text);">
-    <h2 class="p--1">Weitere Inszenierungen</h2>
-  </div>
-
-</article>
+{% endif %}
 
 {# Output a list of random productions, excluding the current production, default limit of 48 #}
 {% set productionList = collections.productions | randomLimit((settings.theme.theme_features.item_output_limit or 48), page.url) %}

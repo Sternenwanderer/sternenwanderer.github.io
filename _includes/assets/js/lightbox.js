@@ -43,6 +43,7 @@
   function openLightbox(index) {
     currentIndex = index;
     updateLightboxContent();
+    updateActiveThumbnail(currentIndex);
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
@@ -51,6 +52,23 @@
   function closeLightbox() {
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    // Remove all active thumbnail states
+    const allFigures = document.querySelectorAll('.image-gallery__figure');
+    allFigures.forEach(fig => fig.classList.remove('is-active'));
+  }
+
+  // Update active thumbnail state
+  function updateActiveThumbnail(index) {
+    const allFigures = document.querySelectorAll('.image-gallery__figure');
+    allFigures.forEach((fig, i) => {
+      if (i === index) {
+        fig.classList.add('is-active');
+        // Scroll thumbnail into view if sidebar is scrollable
+        fig.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        fig.classList.remove('is-active');
+      }
+    });
   }
 
   // Update lightbox content
@@ -72,12 +90,14 @@
   function showPrevious() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateLightboxContent();
+    updateActiveThumbnail(currentIndex);
   }
 
   // Navigate to next image
   function showNext() {
     currentIndex = (currentIndex + 1) % images.length;
     updateLightboxContent();
+    updateActiveThumbnail(currentIndex);
   }
 
   // Event listeners
