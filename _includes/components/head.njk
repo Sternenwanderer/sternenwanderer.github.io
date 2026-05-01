@@ -1,6 +1,5 @@
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="https://github.com/danurbanowicz">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="/site.webmanifest">
@@ -32,6 +31,28 @@
   {% else %}
     <link rel="canonical" href="{{ settings.metadata.site_url | url }}{{ page.url }}">
   {% endif %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PerformingGroup",
+    "name": "{{ settings.metadata.site_title }}",
+    "description": "Studentische Theatergruppe am Brechtbau Tübingen, aktiv seit 2022.",
+    "url": "{{ settings.metadata.site_url }}",
+    "email": "{{ settings.metadata.site_email }}",
+    "sameAs": "{{ settings.metadata.site_social_url }}",
+    "foundingDate": "2022",
+    "location": {
+      "@type": "Place",
+      "name": "Brechtbau",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tübingen",
+        "addressCountry": "DE"
+      }
+    }
+  }
+  </script>
 
   {# Set theme and base styles #}
   {% set css %}

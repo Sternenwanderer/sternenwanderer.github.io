@@ -35,13 +35,16 @@ section: production
 
   {% if poster %}
   <section class="poster-section">
-    {# Make an array of the enabled image formats from settings.yaml #}
-    {% set outputFormats = [] %}
-    {% for format, i in settings.images %}
-      {% if i.enabled === true %}
-        {{ '' if outputFormats.push(format) }}
-      {% endif %}
-    {% endfor %}
+    {# Build enabled formats list without relying on array.push() mutation #}
+    {% if settings.images.avif.enabled and settings.images.webp.enabled %}
+      {% set outputFormats = ["avif", "webp", "jpeg"] %}
+    {% elif settings.images.avif.enabled %}
+      {% set outputFormats = ["avif", "jpeg"] %}
+    {% elif settings.images.webp.enabled %}
+      {% set outputFormats = ["webp", "jpeg"] %}
+    {% else %}
+      {% set outputFormats = ["jpeg"] %}
+    {% endif %}
 
     {# Create an object for the poster image parameters #}
     {% set params =
@@ -74,13 +77,16 @@ section: production
     <div class="production-content__gallery">
 <div class="image-gallery">
   {% for image in images %}
-    {# Make an array of the enabled image formats from settings.yaml #}
-    {% set outputFormats = [] %}
-    {% for format, i in settings.images %}
-      {% if i.enabled === true %}
-        {{ '' if outputFormats.push(format) }}
-      {% endif %}
-    {% endfor %}
+    {# Build enabled formats list without relying on array.push() mutation #}
+    {% if settings.images.avif.enabled and settings.images.webp.enabled %}
+      {% set outputFormats = ["avif", "webp", "jpeg"] %}
+    {% elif settings.images.avif.enabled %}
+      {% set outputFormats = ["avif", "jpeg"] %}
+    {% elif settings.images.webp.enabled %}
+      {% set outputFormats = ["webp", "jpeg"] %}
+    {% else %}
+      {% set outputFormats = ["jpeg"] %}
+    {% endif %}
 
     {# Create an object for our gallery image parameters #}
     {% set params =

@@ -22,13 +22,16 @@
 							{% endfor %}
 						{% endif %}
 
-						{# Make an array of the enabled image formats from settings.yaml #}
-						{% set outputFormats = [] %}
-						{% for format, i in settings.images %}
-							{% if i.enabled === true %}
-								{{ '' if outputFormats.push(format) }}
-							{% endif %}
-						{% endfor %}
+						{# Build enabled formats list without relying on array.push() mutation #}
+						{% if settings.images.avif.enabled and settings.images.webp.enabled %}
+							{% set outputFormats = ["avif", "webp", "jpeg"] %}
+						{% elif settings.images.avif.enabled %}
+							{% set outputFormats = ["avif", "jpeg"] %}
+						{% elif settings.images.webp.enabled %}
+							{% set outputFormats = ["webp", "jpeg"] %}
+						{% else %}
+							{% set outputFormats = ["jpeg"] %}
+						{% endif %}
 
 						{# Create an object for our production thumbnail image parameters which we can then
         		destructure inside our shortcode function. See eleventy.js for what's going on #}
