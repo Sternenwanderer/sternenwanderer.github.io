@@ -10,46 +10,45 @@ poster:
 year: SoSe 2026
 date: 2026-05-25
 cast:
-  - name: "Harkers"
+  - name: "Die Harkers"
     members:
       - 'Wilhelmina "Mina" Murray: Ju Lenz'
       - "Jonathan Harker: Cedric Terrell"
-  - name: "Westenras"
+  - name: "Die Westenras"
     members:
       - "Lucy Westenra: Sophie Schmid"
       - "Mrs Westenra: Vanda"
       - "Magd: Nicolai Plenk"
-  - name: "The Heroes"
+  - name: "Die Held*innen"
     members:
       - "Prof. Dr. Abraham van Helsing: Antonia Anstatt"
       - "Dr. Jack Seward: Maruscha Winkler"
       - "Arthur Holmwood: Ilan Schildhauer"
       - "Quincy P. Morris: Lisa Müller"
-  - name: "The Transylvanians"
+  - name: "Die Transsylvanier*innen"
     members:
       - "Graf Dracula: Aschen Dehner"
       - "Kutscher*in: Toby Bubser"
       - "Kutscher*in: Leonard Steffes"
       - "Kutscher*in: Rian Knittel"
-      - "Sirene: Naemi Colin"
-      - "Sirene: Lena Wittekind"
-      - "Sirene: Miriam Betz"
-  - name: "Seward's Asylum"
+      - "Sirene: Naemi Colin, Lena Wittekind & Miriam Betz"
+  - name: "Sewards Sanatorium"
     members:
-      - "Renfield: Miriam Berst"
-      - "Renfield: Alina Dittrich"
+      - "Renfield: Miriam Berst & Alina Dittrich"
       - "Assistent*in: Juliane Schöllhorn"
-  - name: "The Demeter"
+  - name: "Die Crew der Demeter"
     members:
       - "Kapitän der Demeter: Charlotte Roth"
       - "Erster Maat: Nicolai Plenk"
       - "Schiffscrew: Toby Bubser, Avery Lagler, Leonard Steffes & Rian Knittel"
-  - name: "All the Rest"
+  - name: "Die kleinen Rollen"
     members:
       - "Zeitungskind: Paula Roth"
       - "Schwester Agatha: Georg"
       - "Transsylvannische Bevölkerung: Paula Roth, Nicolai Plenk, Vanda, Avery Lagler & Charlotte Roth"
-      - "Wolf / Wölfe: Teya Rohner"
+      - "Wölfe: Teya Rohner"
+crew:
+  - "Technik: Diana Nowicki"
 ---
 Die Nächte werden länger.
 Lucy schläft nicht mehr.
