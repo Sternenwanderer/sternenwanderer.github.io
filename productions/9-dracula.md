@@ -70,5 +70,5 @@ Ein Schloss. Ein Graf.
 Eine letzte Begegnung.
 
 {% if reservierung.verkauf %}
-    <a href="/reservierung/" class="button">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
+    <a href="/reservierung/" class="button button--solid">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
 {% endif %}
