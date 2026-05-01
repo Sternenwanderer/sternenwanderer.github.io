@@ -54,6 +54,7 @@ section: production
         "classes": "poster-image",
         "loadingType": "eager",
         "viewportSizes": "(min-width: 1140px) 70vw, (min-width: 540px) 90vw, 100vw",
+        "outputFormats": outputFormats,
         "outputWidths": [
           settings.config.image_width_sm,
           settings.config.image_width_md,
@@ -66,7 +67,7 @@ section: production
       }
     %}
 
-    <div class="dynamic-shadow-wrapper" style="--bg-image: url('{{ poster.src }}')">
+    <div class="dynamic-shadow-wrapper" style="--bg-image: url('{{ poster.src | getLowSrc }}')">
       {% generateImage params %}
     </div>
   </section>
@@ -170,4 +171,4 @@ section: production
 <script>{{ lightboxJs | jsmin | safe }}</script>
 
 {# Appended to <head> during build #}
-{% include "components/opengraph.njk" %}
+{% include "components/opengraph.njk" %}{% include "components/opengraph.njk" %}

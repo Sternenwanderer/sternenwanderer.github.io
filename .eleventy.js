@@ -147,6 +147,19 @@ module.exports = function(eleventyConfig) {
     return encodeURIComponent(url);
   });
 
+  // Get a low res image URL for dynamic shadows
+  eleventyConfig.addAsyncFilter("getLowSrc", async function(src) {
+    if (!src) return "";
+    src = src.startsWith("/") ? src.slice(1) : src;
+    let metadata = await Image(src, {
+      widths: [400],
+      formats: ["jpeg"],
+      urlPath: "/assets/images/",
+      outputDir: "./img-cache/",
+    });
+    return metadata.jpeg[0].url;
+  });
+
   // Minify CSS using Lightning CSS (faster and more modern than clean-css)
   eleventyConfig.addFilter("cssmin", async function(code) {
     if (process.env.NODE_ENV === "production") {

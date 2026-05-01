@@ -34,15 +34,14 @@
 						{% endif %}
 
 						{# Create an object for our production thumbnail image parameters which we can then
-        		destructure inside our shortcode function. See eleventy.js for what's going on #}
-						{% set params = 
+						destructure inside our shortcode function. See eleventy.js for what's going on #}
+						{% set params =
 							{
 								"src": image.src,
 								"alt": image.caption or title,
 								"loadingType": "eager" if (loop.first and section != "production") else "lazy",
 								"viewportSizes": "(min-width: 1140px) 22vw, (min-width: 540px) 45vw, 85vw",
 								"outputWidths": [
-									settings.config.image_grid_width_sm,
 									settings.config.image_grid_width_md,
 									settings.config.image_grid_width_lg
 								],
@@ -54,7 +53,7 @@
 						%}
 
 						{# The image shortcode #}
-						<div class="dynamic-shadow-wrapper" style="--bg-image: url('{{ image.src }}')">
+						<div class="dynamic-shadow-wrapper" style="--bg-image: url('{{ image.src | getLowSrc }}')">
 							{% generateImage params %}
 						</div>
 						

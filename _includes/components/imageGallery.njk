@@ -3,7 +3,7 @@
     {# Make an array of the enabled image formats from settings.yaml #}
     {% set outputFormats = [] %}
     {% for format, i in settings.images %}
-      {% if i.enabled === true %}
+      {% if i.enabled %}
         {{ '' if outputFormats.push(format) }}
       {% endif %}
     {% endfor %}
@@ -17,7 +17,6 @@
         "loadingType": "eager" if loop.first else "lazy",
         "viewportSizes": "(min-width: 1140px) 35vw, (min-width: 840px) 45vw, 100vw",
         "outputWidths": [
-          settings.config.image_width_sm,
           settings.config.image_width_md,
           settings.config.image_width_lg
         ],
