@@ -50,7 +50,3 @@ Doch bald bemerken sie, dass so ein Loch nicht ohne Aufmerksamkeit bleibt: Pilge
 Das große Buddeln auf der Brechtbaubühne: Die Sternenwanderer präsentieren Leon Englers zeitgenössische Komödie mit viel Spaß und Absurdität.
 
 Aufführungen am 15. / 16. / 18. / 19. / 20. Dezember im Brechtbau Theater in der Wilhelmstraße 50.
-
-{% if reservierung.verkauf %}
-    <a href="/reservierung/" class="button">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
-{% endif %}
