@@ -237,12 +237,10 @@ h4 {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  /* Elegant tracking */
   line-height: 1.2;
-  margin-top: calc(var(--space) * 2.5);
+  margin-top: calc(var(--space) * 1.5);
   margin-bottom: var(--space);
   text-align: center;
-  /* Centered titles like a playbill */
 }
 
 h1 {
@@ -359,9 +357,9 @@ blockquote {
 
 /* Header */
 header.p--2 {
-  padding: calc(var(--space) * 2) var(--space);
+  padding: var(--space);
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: calc(var(--space) * 3);
+  margin-bottom: calc(var(--space) * 1.5);
   text-align: center;
   background: linear-gradient(to bottom, var(--color-background), transparent);
 }
@@ -553,18 +551,19 @@ footer.p--2 {
 }
 
 .grid--intro h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   line-height: 1.1;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   border: none;
-  /* Removed the default h1 border for this context */
 }
 
 .grid--intro .markdown {
   font-style: italic;
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #555;
+  color: var(--color-text);
+  opacity: 0.6;
 }
 
 /* Homepage Intro Enhancement */
@@ -602,11 +601,10 @@ article > header .grid--intro {
 }
 
 article > header .grid--intro .markdown {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   max-width: 55ch;
-  margin: 0 auto var(--space) auto;
-  opacity: 0.9;
+  margin: 0 auto calc(var(--space) * 0.5) auto;
 }
 
 article > header .button {
@@ -622,17 +620,16 @@ article > header .button::after {
 
 .production-meta {
   font-family: var(--font-sans);
-  /* Contrast for technical info */
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-top: 2rem;
-  padding-top: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--color-border);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .production-meta p {
@@ -640,8 +637,12 @@ article > header .button::after {
 }
 
 /* Poster */
+article > header {
+  padding-bottom: calc(var(--space) * 0.75);
+}
+
 .poster-section {
-  margin: var(--space) auto calc(var(--space) * 1.5) auto;
+  margin: calc(var(--space) * 0.5) auto var(--space) auto;
   max-width: 500px;
   padding: 0;
   background: transparent;
