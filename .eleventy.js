@@ -6,6 +6,8 @@ const eleventyHelmetPlugin = require("eleventy-plugin-helmet");
 const Image = require("@11ty/eleventy-img");
 const MarkdownIt = require("markdown-it");
 const mdRender = new MarkdownIt();
+const fs = require("fs");
+const path = require("path");
 
 module.exports = function(eleventyConfig) {
 
@@ -68,7 +70,7 @@ module.exports = function(eleventyConfig) {
       sharpAvifOptions: { quality: outputQualityAvif },
       formats: outputFormats,
       urlPath: "/assets/images/",
-      outputDir: "./_site/assets/images/",
+      outputDir: "./img-cache/",
       cacheOptions: {
         // If image is a remote URL, this is the amount of time before 11ty fetches a fresh copy
         duration: "5y",
@@ -233,6 +235,18 @@ module.exports = function(eleventyConfig) {
   // Copy _headers file
   eleventyConfig.addPassthroughCopy("_headers");
 
+  // Copy pre-generated images from img-cache/ into the site output.
+  // img-cache/ is committed to git so Cloudflare Pages builds skip re-processing
+  // unchanged images (eleventy-img checks for existing files by hash).
+  eleventyConfig.on("eleventy.after", () => {
+    const src = path.join(__dirname, "img-cache");
+    const dest = path.join(__dirname, "_site", "assets", "images");
+    if (!fs.existsSync(src)) return;
+    fs.mkdirSync(dest, { recursive: true });
+    for (const file of fs.readdirSync(src)) {
+      fs.copyFileSync(path.join(src, file), path.join(dest, file));
+    }
+  });
 
   eleventyConfig.setServerOptions({
     liveReload: true

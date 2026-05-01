@@ -8,7 +8,7 @@ metadata:
   site_subtitle_1: Tübingen, BW
   # Home page description, accepts markdown
   site_description: >
-    Die Sternenwander sind eine studentische Theatergruppe, die seit 2022 am Brechtbau aktiv ist.
+    Die Sternenwanderer sind eine studentische Theatergruppe, die seit 2022 am Brechtbau aktiv ist.
   # footer contact email
   site_email: sternenwanderertuebingen@gmail.com
   # footer social link (the social title is defined in the i18n section)
@@ -22,7 +22,7 @@ metadata:
     site_title: Sternenwanderer
     # meta description
     site_description: >-
-      Webseite der Sternenwanderer—einer studentische Theatergrupp am Brechtbau Tübingen.
+      Webseite der Sternenwanderer—eine studentische Theatergruppe am Brechtbau Tübingen.
     # Adds a noindex <meta> tag on all site pages, be careful y'all!
     # Instead you can block indexing per-project with no_index: true
     no_index: false

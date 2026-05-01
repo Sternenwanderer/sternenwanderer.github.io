@@ -17,6 +17,35 @@
   <meta property="og:image" content="{{ settings.metadata.site_url }}{{ poster.src }}" data-helmet>
 {% endif %}
 
+{% if title and title != settings.metadata.site_title %}
+<script type="application/ld+json" data-helmet>
+{
+  "@context": "https://schema.org",
+  "@type": "TheaterEvent",
+  "name": "{{ title }}",
+  "description": "{{ description | striptags | truncate(200) }}",
+  "performer": {
+    "@type": "PerformingGroup",
+    "name": "{{ settings.metadata.site_title }}",
+    "url": "{{ settings.metadata.site_url }}"
+  },
+  "organizer": {
+    "@type": "PerformingGroup",
+    "name": "{{ settings.metadata.site_title }}"
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Brechtbau",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tübingen",
+      "addressCountry": "DE"
+    }
+  }{% if poster and poster.src %},
+  "image": "{{ settings.metadata.site_url }}{{ poster.src }}"{% endif %}
+}
+</script>
+{% endif %}
 <meta name="twitter:card" content="summary_large_image" data-helmet>
 {% if page.url == "/" %}
   <meta name="twitter:title" content="{{ settings.metadata.seo.site_title or settings.metadata.site_title }}" data-helmet>
