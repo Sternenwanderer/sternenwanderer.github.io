@@ -14,7 +14,9 @@ permalink: "/index.html"
     </div>
 
     {% if reservierung.verkauf %}
-      <a href="/reservierung/" class="button button--solid">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
+      <div style="text-align: center;">
+        <a href="/reservierung/" class="button button--solid">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
+      </div>
     {% endif %}
 
   </header>
