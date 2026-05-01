@@ -1,6 +1,6 @@
-verkauf: false # <-- false = Keine Reservierung / true = Reservierung aktiviert
+verkauf: true # <-- false = Keine Reservierung / true = Reservierung aktiviert
 ausverkauft: false # wenn Keine tickets übrig
-titel: "Der Mörtel der Nation"
-untertitel: "Eine Komödie von Leon Engler"
-preis: "5€ p.P."
-spreadsheet_deployment: https://script.google.com/macros/s/AKfycbx4x-xUBaJjaQrLYWvlAmXSULn728xmNBSnpEHthePYOm7MF0WJvS84CkvMtMusr7OI/exec
+titel: "Dracula"
+untertitel: "Basierend auf Bram Stokers Dracula"
+preis: "8€ p.P."
+spreadsheet_deployment: https://script.google.com/macros/s/AKfycbw0R82m2vEGMHNE2XFkHG4f3Og6Ud_DdMZofKiVZqesKlDjFaDbpdscu_nwGieW8PD5/exec
