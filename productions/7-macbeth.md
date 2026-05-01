@@ -13,7 +13,3 @@ Schottland im elften Jahrhundert. Banquo und Macbeth, tapfere Heerführer des K�
 Schwerter werden für den Krieg geschärft, verborgene Messer gewetzt und geheime Gesänge beschwören die Mächte der Hekate. Theater Sternenwanderer spielt und singt William Shakespeares okkulte Tragödie in deutscher Sprache.
 
 Aufführungen am 9. / 10. / 12. / 13. Juni um  19 Uhr im BrechtbauTheater Tübingen, Wilhelmstraße 50
-
-{% if reservierung.verkauf %}
-    <a href="/reservierung/" class="button">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
-{% endif %}
