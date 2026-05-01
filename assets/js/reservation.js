@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         const res = await fetch(spreadsheetDeployment);
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
         const daten = await res.json();
 
         daten.forEach(({ date, remaining }) => {
