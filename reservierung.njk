@@ -25,7 +25,7 @@ permalink: /reservierung/index.html
       <p>Leider können wir Ihnen keine Karten mehr reservieren. Wir laden Sie aber recht herzlich ein, ihr Glück an der Abendkasse zu versuchen, da Aufgrund von Nichterscheinen häufig doch Plätze übrig bleiben. Wir weisen jedoch ausdrücklich darauf hin, dass wir Ihnen keinen Zutritt garantieren können.</p>
     </div>
   {% else %}
-  <form name="reservation" id="reservation" class="reservation-form" method="POST" action="{{ reservierung.spreadsheet_deployment }}">
+  <form name="reservation" id="reservation" class="reservation-form" method="POST" action="/api/reservierung">
     <div class="form-field">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
@@ -43,7 +43,7 @@ permalink: /reservierung/index.html
 
     <div class="form-field">
       <label for="datum">Vorstellungsdatum</label>
-      <select id="datum" name="datum" required data-spreadsheet-deployment="{{ reservierung.spreadsheet_deployment }}">
+      <select id="datum" name="datum" required data-spreadsheet-deployment="/api/reservierung">
         <option value="">Bitte wählen...</option>
       </select>
     </div>
