@@ -1,21 +1,37 @@
+{% macro castRow(member) %}
+  {% set parts = member.split(':') %}
+  {% if parts.length == 1 %}
+    {% set parts = member.split('—') %}
+  {% endif %}
+  <tr>
+    <td class="cast-crew__name">{{ parts[0] | trim }}</td>
+    <td class="cast-crew__role">{{ parts[1] | trim }}</td>
+  </tr>
+{% endmacro %}
+
 {% if cast or crew %}
 <div class="cast-crew">
   {% if cast %}
   <section class="cast-crew__section">
     <h2>Cast</h2>
-    <table class="cast-crew__table">
-      {% for member in cast %}
-      {# Support both old format (Name—Role) and new format (Name: Role) #}
-      {% set parts = member.split(':') %}
-      {% if parts.length == 1 %}
-        {% set parts = member.split('—') %}
+    {% if cast[0].members %}
+      {% for group in cast %}
+      {% if group.name %}
+      <h3 class="cast-crew__group-name">{{ group.name }}</h3>
       {% endif %}
-      <tr>
-        <td class="cast-crew__name">{{ parts[0] | trim }}</td>
-        <td class="cast-crew__role">{{ parts[1] | trim }}</td>
-      </tr>
+      <table class="cast-crew__table">
+        {% for member in group.members %}
+        {{ castRow(member) }}
+        {% endfor %}
+      </table>
       {% endfor %}
-    </table>
+    {% else %}
+      <table class="cast-crew__table">
+        {% for member in cast %}
+        {{ castRow(member) }}
+        {% endfor %}
+      </table>
+    {% endif %}
   </section>
   {% endif %}
 
