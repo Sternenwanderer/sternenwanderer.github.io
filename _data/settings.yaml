@@ -16,6 +16,8 @@ metadata:
   site_about_url: '/about.html'
   # SVG image used for sharing/bookmark icons
   site_icon_svg: /assets/uploads/favicon.svg
+  # fallback og:image for pages without a poster (home, about, reservierung)
+  site_og_image: /favicon-512.png
   # home page SEO fields
   seo:
     # <title> tag
@@ -82,11 +84,11 @@ i18n:
 config:
   # define responsive image widths for project thumbnails and large images
   # modifying these will require a corresponding change to viewport sizes in responsive image markup
-  image_grid_width_sm: 640
-  image_grid_width_md: 1080
-  image_grid_width_lg: 1800
-  image_width_sm: 1080
-  image_width_md: 1800
-  image_width_lg: 2400
+  image_grid_width_sm: 400
+  image_grid_width_md: 800
+  image_grid_width_lg: 1080
+  image_width_sm: 900
+  image_width_md: 1440
+  image_width_lg: 1920
   # define the optional system font stack
   font_stack_system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
