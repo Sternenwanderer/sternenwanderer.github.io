@@ -35,4 +35,4 @@ crew:
 date: 2024-06-26
 ---
 
-Wir haben uns offiziell von den Sternenwanderern getrennt, wir ihr mehr über uns wissen wollt, besucht gerne [unsere Webseite](https://bruchbuehne.de).
+Wir haben uns offiziell von den Sternenwanderern getrennt, wenn ihr mehr über uns wissen wollt, besucht gerne [unsere Webseite](https://bruchbuehne.de).
