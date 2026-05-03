@@ -120,7 +120,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("productions", function(collectionApi) {
     return collectionApi.getFilteredByGlob("productions/*.md")
       //.filter(production => !Boolean(production.data.draft))
-      .sort((a, b) => b.data.position - a.data.position);
+      .sort((a, b) => a.data.position - b.data.position);
   });
 
   // A filter to limit output of collection items
