@@ -25,7 +25,8 @@
   "@context": "https://schema.org",
   "@type": "TheaterEvent",
   "name": "{{ title }}",
-  "description": "{{ description | striptags | truncate(200) }}",
+  "startDate": "{{ date | dateIso }}",
+  "eventStatus": "https://schema.org/EventScheduled",
   "performer": {
     "@type": "PerformingGroup",
     "name": "{{ settings.metadata.site_title }}",
@@ -33,18 +34,26 @@
   },
   "organizer": {
     "@type": "PerformingGroup",
-    "name": "{{ settings.metadata.site_title }}"
+    "name": "{{ settings.metadata.site_title }}",
+    "url": "{{ settings.metadata.site_url }}"
   },
   "location": {
     "@type": "Place",
-    "name": "Brechtbau",
+    "name": "BrechtbauTheater",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Wilhelmstraße 50",
       "addressLocality": "Tübingen",
       "addressCountry": "DE"
     }
-  }{% if poster and poster.src %},
-  "image": "{{ settings.metadata.site_url }}{{ poster.src }}"{% endif %}
+  }{% if description %},
+  "description": "{{ description | striptags | trim | truncate(200) }}"{% endif %}{% if poster and poster.src %},
+  "image": "{{ settings.metadata.site_url }}{{ poster.src }}"{% endif %}{% if reservierung.verkauf %},
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ settings.metadata.site_url }}/reservierung/",
+    "availability": "https://schema.org/InStock"
+  }{% endif %}
 }
 </script>
 {% endif %}

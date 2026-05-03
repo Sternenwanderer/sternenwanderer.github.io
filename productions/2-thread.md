@@ -1,5 +1,6 @@
 ---
 draft: false
+position: 2
 title: Thread
 description: >
     Modern adaptation of the Theseus and Minotaur myth written by our director Diana.

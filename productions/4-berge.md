@@ -1,6 +1,6 @@
 ---
 draft: false
-
+position: 4
 title: Berge des Wahnsinns
 description: >
   Adaptation der Lovecraft Kurzgeschichte 'At the Mountains of Madness' von unserem Regisseur Chris selbst geschrieben.

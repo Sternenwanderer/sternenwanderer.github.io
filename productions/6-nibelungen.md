@@ -1,5 +1,6 @@
 ---
 draft: false
+position: 6
 title: Nibelungen
 description: >
   Die Nibelungen nach Friedrich Hebbel.

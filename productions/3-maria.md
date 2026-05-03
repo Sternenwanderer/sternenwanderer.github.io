@@ -1,6 +1,7 @@
 ---
 
 draft: false
+position: 3
 title: Maria Stuart
 description: >
   Inszenierung von Friedrich Schillers Trauerspiel.

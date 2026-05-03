@@ -142,6 +142,11 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy");
   });
 
+  // Date formatting (ISO 8601, for JSON-LD)
+  eleventyConfig.addFilter("dateIso", dateObj => {
+    return DateTime.fromJSDate(dateObj).toISODate();
+  });
+
   // base64 encode a string
   eleventyConfig.addFilter("encodeURL", function(url) {
     return encodeURIComponent(url);
