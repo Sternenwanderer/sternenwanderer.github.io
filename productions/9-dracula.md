@@ -29,7 +29,7 @@ cast:
   - name: "Die Transsylvanier*innen"
     members:
       - "Graf Dracula: Aschen Dehner"
-      - "Kutscher: Toby Bubser, Leonard Steffes, Rian Knittel"
+      - "Kutscher: Toby Bubser, Leonard Steffes & Rian Knittel"
       - "Sirene: Naemi Colin, Lena Wittekind & Miriam Betz"
   - name: "Sewards Sanatorium"
     members:
