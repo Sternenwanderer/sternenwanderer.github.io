@@ -29,14 +29,12 @@ cast:
   - name: "Die Transsylvanier*innen"
     members:
       - "Graf Dracula: Aschen Dehner"
-      - "Kutscher*in: Toby Bubser"
-      - "Kutscher*in: Leonard Steffes"
-      - "Kutscher*in: Rian Knittel"
+      - "Kutscher: Toby Bubser, Leonard Steffes, Rian Knittel"
       - "Sirene: Naemi Colin, Lena Wittekind & Miriam Betz"
   - name: "Sewards Sanatorium"
     members:
       - "Renfield: Miriam Berst & Alina Dittrich"
-      - "Assistent*in: Juliane Schöllhorn"
+      - "Assistentin: Juliane Schöllhorn"
   - name: "Die Crew der Demeter"
     members:
       - "Kapitän der Demeter: Charlotte Roth"
