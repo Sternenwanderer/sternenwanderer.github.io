@@ -130,6 +130,12 @@ section: production
           </div>
         {% endif %}
 
+        {% if zusammenfassung %}
+          <div class="programmheft-download">
+            <a href="{{ zusammenfassung }}" download class="button">Zusammenfassung herunterladen (PDF)</a>
+          </div>
+        {% endif %}
+
         {% include "components/castCrew.njk" %}
       </div>
     </div>

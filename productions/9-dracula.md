@@ -5,6 +5,7 @@ title: Dracula
 director: Ilea Rahn & Ruben Sailer
 description: >
   Eine Adaption von Bram Stokers Dracula
+zusammenfassung: /assets/uploads/dracula/zusammenfassung.pdf
 poster:
   src: /assets/uploads/dracula/poster.jpg
   caption: Poster designt von Maruscha Winkler

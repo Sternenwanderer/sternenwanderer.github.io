@@ -5,11 +5,14 @@ const slugify = require("slugify");
 const eleventyHelmetPlugin = require("eleventy-plugin-helmet");
 const Image = require("@11ty/eleventy-img");
 const MarkdownIt = require("markdown-it");
-const mdRender = new MarkdownIt();
+const mdOptions = { html: true, typographer: true, quotes: ['\u201E', '\u201C', '\u201A', '\u2018'] };
+const mdRender = new MarkdownIt(mdOptions);
 const fs = require("fs");
 const path = require("path");
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.setLibrary("md", new MarkdownIt(mdOptions));
 
   eleventyConfig.addFilter("renderUsingMarkdown", function(rawString) {
     return mdRender.render(rawString);
