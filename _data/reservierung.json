@@ -1,8 +1,8 @@
 {
-  "verkauf": false,
+  "verkauf": true,
   "ausverkauft": false,
   "titel": "Ein Egoist in ungewöhnlichem Grade",
   "untertitel": "Eine überraschend akkurate historische Komödie",
   "preis": "5€ p.P.",
-  "spreadsheet_deployment": "https://script.google.com/macros/s/AKfycbzpxgluREcalQ-16IkoxKI1bQIHfzLGoGmhhRdNQgo05O0E0KN0bPY2vjqPC8h1WK_H/exec"
+  "spreadsheet_deployment": "https://script.google.com/macros/s/AKfycbyIFBna7kVP5dabkk5yD6z75AwCKIF4HZ55UliUPK6xc1YfRnofBFJyJOigWcdodUT9/exec"
 }

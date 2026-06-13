@@ -3,6 +3,7 @@ draft: false
 position: 9
 title: Ein Egoist in ungewöhnlichem Grade
 director: Eli Winkler
+untergruppe: Schall & Schiller
 description: >
     Eine überraschend akkurate historische Komödie.
 poster:
@@ -12,9 +13,9 @@ year: SoSe 2026
 date: 2026-06-29
 ---
 
-Das bekannteste deutsche Dichterpaar - Schiller und Goethe!
+Das bekannteste deutsche Dichterpaar—Schiller und Goethe!
 
-Unser Stück handelt von niemand geringerem als diesen beiden Genies - und ihrem Widersacher August von Kotzebue.
+Unser Stück handelt von niemand geringerem als diesen beiden Genies—und ihrem Widersacher August von Kotzebue.
 
 Wie sieht das Leben hinter den Kulissen des Weimarer Theaters um 1800 aus?
 
