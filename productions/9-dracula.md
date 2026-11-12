@@ -68,7 +68,3 @@ Irgendwann muss man reisen—zurück an den Ort, an dem alles begann.
 Transsilvanien im Winter.
 Ein Schloss. Ein Graf.
 Eine letzte Begegnung.
-
-{% if reservierung.verkauf %}
-    <a href="/reservierung/" class="button button--solid">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
-{% endif %}
