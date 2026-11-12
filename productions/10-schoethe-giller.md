@@ -11,6 +11,7 @@ poster:
   caption: Poster designt von Maruscha Winkler
 year: SoSe 2026
 date: 2026-06-29
+programmheft: /assets/uploads/schoethe/programmheft.pdf
 ---
 
 Das bekannteste deutsche Dichterpaar—Schiller und Goethe!
@@ -24,7 +25,3 @@ Kann Schillers und Goethes Neigung? Verbundenheit? Beziehung? den Intrigen Kotze
 Wie viel unnötigen Streit können erwachsene Männer miteinander haben, wenn es um nichts geht als ihr Ego?
 
 Erfahrt die Antworten auf keine dieser Fragen in der schlagfertigen, witzigen, überraschend historisch korrekten Komödie "Ein Egoist in ungewöhnlichem Grade".
-
-{% if reservierung.verkauf %}
-    <a href="/reservierung/" class="button button--solid">🎟️ Jetzt Karten für {{ reservierung.titel }} reservieren 🎟️</a>
-{% endif %}

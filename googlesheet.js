@@ -21,11 +21,11 @@ function doPost(e) {
     const timestamp = new Date();
     sheet.appendRow([name, anzahl, email, timestamp, herkunftFinal]);
 
-    const subject = `Ihre Reservierung für Dracula am ${datum}`;
+    const subject = `Ihre Reservierung für Lysistrate am ${datum}`;
     const body = `
 Hallo ${name},
 
-vielen Dank für Ihre Reservierung für Dracula am ${datum}.
+vielen Dank für Ihre Reservierung für Lysistrate am ${datum}.
 Wir haben ${anzahl} Karte(n) für Sie hinterlegt.
 
 Bitte beachten Sie: Die Karten liegen an der Abendkasse zur Abholung bereit. Die Bezahlung ist nur mit Bargeld möglich.
