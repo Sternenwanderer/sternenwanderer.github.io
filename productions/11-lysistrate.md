@@ -2,7 +2,7 @@
 draft: false
 position: 9
 title: Lysistrate
-director: Aschen Dehner & Vanda 
+director: Aschen Dehner & Vanda Ondrejó
 description: >
     Eine sexuell-skurrile und anzüglich-aufrührerische Antikriegskomödie
 poster:
